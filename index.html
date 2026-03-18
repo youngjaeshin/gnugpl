@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GNU Geophysics Lab — 경상국립대학교 지구물리 연구실</title>
+  <meta name="description" content="경상국립대학교 지질과학과 지구물리 연구실. 탄성파 완전파형역산, 지구물리 모델링, 응용지구물리탐사 연구." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blue:  { DEFAULT: '#3B82F6', dark: '#2563EB', lt: '#EFF6FF' },
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<nav id="navbar" role="navigation" aria-label="주 메뉴">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="GNU 지구물리 연구실 로고" class="nav-logo-img" width="42" height="42" />
+        <div>
+          <div class="nav-logo-text-main">GNU Geophysics Lab</div>
+          <div class="nav-logo-text-sub">경상국립대학교 지구물리 연구실</div>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-1">
+        <a href="index.html"        class="nav-link active">Home</a>
+        <a href="research.html"     class="nav-link">Research</a>
+        <a href="members.html"      class="nav-link">Members</a>
+        <a href="publications.html" class="nav-link">Publications</a>
+        <a href="gallery.html"      class="nav-link">Gallery</a>
+        <a href="contact.html"      class="nav-link">Contact</a>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="hamburger" aria-label="메뉴 열기" aria-expanded="false"
+              class="md:hidden flex flex-col gap-[5px] p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-300">
+        <span class="block w-6 h-0.5 transition-transform duration-200"></span>
+        <span class="block w-6 h-0.5 transition-opacity duration-200"></span>
+        <span class="block w-6 h-0.5 transition-transform duration-200"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" role="menu">
+    <a href="index.html"        class="nav-link" role="menuitem">Home</a>
+    <a href="research.html"     class="nav-link" role="menuitem">Research</a>
+    <a href="members.html"      class="nav-link" role="menuitem">Members</a>
+    <a href="publications.html" class="nav-link" role="menuitem">Publications</a>
+    <a href="gallery.html"      class="nav-link" role="menuitem">Gallery</a>
+    <a href="contact.html"      class="nav-link" role="menuitem">Contact</a>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero-section" aria-label="소개">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+    <div class="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-16">
+
+      <!-- Hero logo — dark emblem on white is perfectly visible -->
+      <div class="flex-shrink-0 flex items-center justify-center animate-fade-up">
+        <div style="width:120px;height:120px;border-radius:50%;background:#fff;border:1.5px solid #E2E8F0;box-shadow:0 4px 20px rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;padding:8px;">
+          <img src="images/logo.png"
+               alt="GNU 지구물리 연구실 엠블럼"
+               width="104" height="104"
+               style="width:100%;height:100%;object-fit:contain;border-radius:50%;" />
+        </div>
+      </div>
+
+      <div class="max-w-2xl">
+        <div class="hero-badge animate-fade-up">GNU Geophysics Lab</div>
+        <h1 class="hero-title animate-fade-up animate-fade-up-d1">
+          지구의 내부를 파형으로<br>탐사하다
+        </h1>
+        <p class="hero-title-sub animate-fade-up animate-fade-up-d1">Exploring the Earth's Interior Through Seismic Waves</p>
+        <p class="hero-desc animate-fade-up animate-fade-up-d2">
+          경상국립대학교 지질과학과 지구물리 연구실은 탄성파 완전파형역산(FWI), 지구물리 모델링, 응용탐사, 그리고 지구과학 머신러닝을 연구합니다. 지구 내부 구조를 고해상도로 규명하여 에너지 자원 탐사와 자연재해 대응에 기여합니다.
+        </p>
+        <div class="flex flex-wrap gap-3 animate-fade-up animate-fade-up-d3">
+          <a href="research.html" class="btn-primary">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            연구 분야 보기
+          </a>
+          <a href="publications.html" class="btn-outline">
+            논문 목록
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="hero-stats animate-fade-up animate-fade-up-d4">
+          <div class="hero-stat">
+            <span class="hero-stat-num">SCI</span>
+            <span class="hero-stat-label">저널 논문</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">5+</span>
+            <span class="hero-stat-label">연구 주제</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">2024</span>
+            <span class="hero-stat-label">연구실 개설</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">GNU</span>
+            <span class="hero-stat-label">경상국립대학교</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== RESEARCH HIGHLIGHTS ===================== -->
+<section class="section-py bg-gray" aria-label="연구 분야">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12 reveal">
+      <h2 class="section-title centered mx-auto inline-block">주요 연구 분야</h2>
+      <p class="text-sm leading-relaxed mt-4 max-w-xl mx-auto" style="color:var(--text-sub);">
+        지구물리학의 핵심 방법론과 최신 계산 기법을 결합하여<br class="hidden sm:block">지구 내부 탐사의 새로운 지평을 열어갑니다.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <!-- FWI -->
+      <div class="card p-6 reveal">
+        <div class="research-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" d="M2 12 Q4 5 6 12 Q8 19 10 12 Q12 5 14 12 Q16 19 18 12 Q20 5 22 12"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-base mb-2" style="color:var(--text-main);">탄성파 완전파형역산 (FWI)</h3>
+        <p class="text-sm leading-relaxed mb-3" style="color:var(--text-sub);">
+          지진파 전파형 데이터를 활용한 고해상도 지하 속도 모델 복원. 주파수 도메인 및 시간 도메인 FWI, 비등방성 매질 적용 연구.
+        </p>
+        <a href="research.html#fwi" class="text-xs font-semibold text-blue hover:underline" style="color:var(--blue);">자세히 →</a>
+      </div>
+
+      <!-- Seismic Modeling -->
+      <div class="card p-6 reveal">
+        <div class="research-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-base mb-2" style="color:var(--text-main);">탄성파 전파 모델링</h3>
+        <p class="text-sm leading-relaxed mb-3" style="color:var(--text-sub);">
+          유한차분법(FDM) 및 유한요소법(FEM) 기반 전방 모델링. VTI 매질, 스태거드 그리드, PARDISO 스파스 솔버 적용.
+        </p>
+        <a href="research.html#modeling" class="text-xs font-semibold hover:underline" style="color:var(--blue);">자세히 →</a>
+      </div>
+
+      <!-- Applied Geophysics -->
+      <div class="card p-6 reveal">
+        <div class="research-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 3v18M3 12h18"/>
+            <path stroke-linecap="round" d="M5.6 5.6 Q12 10 18.4 5.6M5.6 18.4 Q12 14 18.4 18.4"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-base mb-2" style="color:var(--text-main);">응용지구물리탐사</h3>
+        <p class="text-sm leading-relaxed mb-3" style="color:var(--text-sub);">
+          전기비저항 토모그래피(ERT), 자력탐사 등 복합 지구물리 데이터 통합 역산 및 광상 탐사 응용.
+        </p>
+        <a href="research.html#applied" class="text-xs font-semibold hover:underline" style="color:var(--blue);">자세히 →</a>
+      </div>
+
+      <!-- ML -->
+      <div class="card p-6 reveal">
+        <div class="research-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/>
+            <path stroke-linecap="round" d="M12 7v4M12 11l-5 6M12 11l5 6"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-base mb-2" style="color:var(--text-main);">지구과학 머신러닝</h3>
+        <p class="text-sm leading-relaxed mb-3" style="color:var(--text-sub);">
+          SVM, Random Forest, DNN 기반 암석 분류 및 지구물리 데이터와 ML의 통합을 통한 광상 탐사 예측 모델 개발.
+        </p>
+        <a href="research.html#ml" class="text-xs font-semibold hover:underline" style="color:var(--blue);">자세히 →</a>
+      </div>
+
+      <!-- CCS -->
+      <div class="card p-6 reveal">
+        <div class="research-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+            <path stroke-linecap="round" d="M12 8v8M8 12h8"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-base mb-2" style="color:var(--text-main);">탄소포집저장 모니터링</h3>
+        <p class="text-sm leading-relaxed mb-3" style="color:var(--text-sub);">
+          4D 탄성파 탐사 기반 CCS 저장소 모니터링. CO₂ 포집·저장 안전성 평가를 위한 시계열 지구물리 역산 연구.
+        </p>
+        <a href="research.html#ccs" class="text-xs font-semibold hover:underline" style="color:var(--blue);">자세히 →</a>
+      </div>
+
+      <!-- Wavefield Separation -->
+      <div class="card p-6 reveal">
+        <div class="research-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" d="M3 12h4l2-6 4 12 2-6h6"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-base mb-2" style="color:var(--text-main);">파동장 분리 기법</h3>
+        <p class="text-sm leading-relaxed mb-3" style="color:var(--text-sub);">
+          탄성파 파동장의 qP·qSV·qSH 모드 분리. 텐서 트레인(TT) 분해 기법을 활용한 2D→3D 확장 연구.
+        </p>
+        <a href="research.html#wavefield" class="text-xs font-semibold hover:underline" style="color:var(--blue);">자세히 →</a>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-10 reveal">
+      <a href="research.html" class="btn-primary">
+        모든 연구 분야 보기
+        <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== NEWS ===================== -->
+<section class="section-py" aria-label="최근 소식">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-3 gap-10">
+
+      <!-- News list -->
+      <div class="lg:col-span-2 reveal">
+        <h2 class="section-title">최근 소식</h2>
+
+        <div class="news-item">
+          <span class="news-date">2025. 03.</span>
+          <div>
+            <span class="news-tag tag-paper">논문</span>
+            <span class="text-sm font-medium" style="color:var(--text-main);">Geophysical Journal International 논문 게재 — 비등방성 VTI 매질에서의 FWI 연구</span>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-date">2024. 09.</span>
+          <div>
+            <span class="news-tag tag-news">소식</span>
+            <span class="text-sm font-medium" style="color:var(--text-main);">경상국립대학교 지질과학과 조교수 임용 — GNU 지구물리 연구실 개설</span>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-date">2024. 06.</span>
+          <div>
+            <span class="news-tag tag-paper">논문</span>
+            <span class="text-sm font-medium" style="color:var(--text-main);">Geophysics 논문 게재 — 텐서 트레인 분해를 활용한 탄성파 파동장 분리</span>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-date">2024. 04.</span>
+          <div>
+            <span class="news-tag tag-event">학회</span>
+            <span class="text-sm font-medium" style="color:var(--text-main);">EGU General Assembly 2024 발표 — CCS 모니터링을 위한 4D FWI</span>
+          </div>
+        </div>
+
+        <div class="news-item">
+          <span class="news-date">2023. 12.</span>
+          <div>
+            <span class="news-tag tag-paper">논문</span>
+            <span class="text-sm font-medium" style="color:var(--text-main);">IEEE TGRS 논문 게재 — 머신러닝 기반 광상 탐사 예측 모델</span>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <a href="publications.html" class="text-sm font-semibold hover:underline" style="color:var(--blue);">
+            모든 논문 보기 →
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick info sidebar -->
+      <div class="reveal">
+        <h2 class="section-title">연구실 안내</h2>
+
+        <div class="highlight-box mb-5">
+          <p class="text-sm font-semibold mb-1" style="color:var(--text-main);">대학원생 모집</p>
+          <p class="text-sm leading-relaxed" style="color:var(--text-body);">
+            지구물리 역산, 수치 모델링, 응용탐사에 관심 있는 대학원생(석·박사)을 모집합니다. 관심 있는 분은 이메일로 연락주세요.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background:var(--blue-lt);">
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"/></svg>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-wide font-semibold" style="color:var(--text-sub);">Email</p>
+              <a href="mailto:shin542@gnu.ac.kr" class="text-sm font-medium hover:underline" style="color:var(--blue);">shin542@gnu.ac.kr</a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5" style="background:var(--blue-lt);">
+              <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-wide font-semibold" style="color:var(--text-sub);">위치</p>
+              <p class="text-sm" style="color:var(--text-body);">경상남도 진주시 진주대로 501<br>경상국립대학교 지질과학과</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-6">
+          <a href="contact.html" class="btn-primary w-full justify-center">
+            연락하기
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AFFILIATION BANNER ===================== -->
+<section class="py-10 border-t bg-gray" style="border-color:var(--gray-line);" aria-label="소속 기관">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 reveal">
+      <div>
+        <p class="text-xs uppercase tracking-widest font-semibold mb-1" style="color:var(--text-sub);">소속</p>
+        <p class="text-lg font-bold" style="color:var(--text-main);">경상국립대학교 지질과학과</p>
+        <p class="text-sm" style="color:var(--text-sub);">Department of Geology, Gyeongsang National University</p>
+      </div>
+      <div class="flex gap-6 items-center">
+        <div class="text-center">
+          <p class="text-2xl font-extrabold" style="color:var(--blue);">1948</p>
+          <p class="text-xs" style="color:var(--text-sub);">설립</p>
+        </div>
+        <div class="w-px h-12" style="background:var(--gray-line);"></div>
+        <div class="text-center">
+          <p class="text-2xl font-extrabold" style="color:var(--blue);">GNU</p>
+          <p class="text-xs" style="color:var(--text-sub);">국립대학교</p>
+        </div>
+        <div class="w-px h-12" style="background:var(--gray-line);"></div>
+        <div class="text-center">
+          <p class="text-2xl font-extrabold" style="color:var(--blue);">진주</p>
+          <p class="text-xs" style="color:var(--text-sub);">경상남도</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer role="contentinfo">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b footer-divider">
+
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <img src="images/logo.png" alt="GNU 지구물리 연구실" class="footer-logo-img" width="30" height="30" />
+          <span class="footer-brand">GNU Geophysics Lab</span>
+        </div>
+        <p class="text-xs leading-relaxed" style="color:var(--text-sub);">
+          경상국립대학교 지질과학과<br>지구물리 연구실<br>탄성파 완전파형역산 · 지구물리 모델링 · 응용탐사
+        </p>
+      </div>
+
+      <div>
+        <p class="footer-heading">Quick Links</p>
+        <ul class="space-y-1.5">
+          <li><a href="research.html"     class="text-xs">Research</a></li>
+          <li><a href="members.html"      class="text-xs">Members</a></li>
+          <li><a href="publications.html" class="text-xs">Publications</a></li>
+          <li><a href="gallery.html"      class="text-xs">Gallery</a></li>
+          <li><a href="contact.html"      class="text-xs">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer-heading">Contact</p>
+        <address class="not-italic space-y-1.5">
+          <p class="text-xs">경상남도 진주시 진주대로 501</p>
+          <p class="text-xs">52828 경상국립대학교 지질과학과</p>
+          <p class="text-xs"><a href="mailto:shin542@gnu.ac.kr">shin542@gnu.ac.kr</a></p>
+        </address>
+      </div>
+    </div>
+
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-xs" style="color:var(--text-sub);">
+        &copy; 2024–2025 GNU Geophysics Lab. Gyeongsang National University. All rights reserved.
+      </p>
+      <p class="text-xs" style="color:#94A3B8;">
+        Prof. 신영재 (Shin Youngjae)
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button id="back-to-top" aria-label="맨 위로" style="
+  position:fixed;bottom:1.75rem;right:1.75rem;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--blue);color:white;border:none;
+  cursor:pointer;box-shadow:0 4px 14px rgba(59,130,246,0.35);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity 0.25s;
+  z-index:500;
+">
+  <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+  </svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

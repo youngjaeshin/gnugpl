@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — GNU Geophysics Lab</title>
+  <meta name="description" content="GNU 지구물리 연구실의 연구 분야: 완전파형역산, 탄성파 모델링, 응용지구물리탐사, 머신러닝, CCS 모니터링." />
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/custom.css" />
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: { blue: { DEFAULT: '#3B82F6', dark: '#2563EB', lt: '#EFF6FF' } } } }
+    }
+  </script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="주 메뉴">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.png" alt="GNU 지구물리 연구실 로고" class="nav-logo-img" width="42" height="42" />
+        <div>
+          <div class="nav-logo-text-main">GNU Geophysics Lab</div>
+          <div class="nav-logo-text-sub">경상국립대학교 지구물리 연구실</div>
+        </div>
+      </a>
+      <div class="hidden md:flex items-center gap-1">
+        <a href="index.html"        class="nav-link">Home</a>
+        <a href="research.html"     class="nav-link active">Research</a>
+        <a href="members.html"      class="nav-link">Members</a>
+        <a href="publications.html" class="nav-link">Publications</a>
+        <a href="gallery.html"      class="nav-link">Gallery</a>
+        <a href="contact.html"      class="nav-link">Contact</a>
+      </div>
+      <button id="hamburger" aria-label="메뉴 열기" aria-expanded="false"
+              class="md:hidden flex flex-col gap-[5px] p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-300">
+        <span class="block w-6 h-0.5 transition-transform duration-200"></span>
+        <span class="block w-6 h-0.5 transition-opacity duration-200"></span>
+        <span class="block w-6 h-0.5 transition-transform duration-200"></span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" role="menu">
+    <a href="index.html"        class="nav-link" role="menuitem">Home</a>
+    <a href="research.html"     class="nav-link" role="menuitem">Research</a>
+    <a href="members.html"      class="nav-link" role="menuitem">Members</a>
+    <a href="publications.html" class="nav-link" role="menuitem">Publications</a>
+    <a href="gallery.html"      class="nav-link" role="menuitem">Gallery</a>
+    <a href="contact.html"      class="nav-link" role="menuitem">Contact</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>Research</span>
+    </div>
+    <h1 class="page-hero-title">연구 분야</h1>
+    <p class="page-hero-sub">Research Areas</p>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="section-py-sm bg-gray border-b" style="border-color:var(--gray-line);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="max-w-3xl reveal">
+      <p class="leading-relaxed text-sm sm:text-base" style="color:var(--text-body);">
+        GNU 지구물리 연구실은 <strong style="color:var(--text-main);">탄성파 수치 모델링과 역산 이론</strong>을 중심으로, 응용 지구물리탐사와 머신러닝을 결합한 융합 연구를 수행합니다. KIGAM 연구원 경력과 박사 과정에서 쌓은 완전파형역산(FWI) 전문성을 바탕으로, 에너지 자원 탐사, 탄소포집저장(CCS) 모니터링, 광상 탐사 예측 등 사회적 가치가 높은 문제에 도전합니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH AREA 1: FWI -->
+<section id="fwi" class="section-py">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-8 rounded-full text-white text-sm font-bold flex items-center justify-center flex-shrink-0" style="background:var(--blue);">01</span>
+          <span class="text-xs font-semibold uppercase tracking-widest" style="color:var(--blue);">Full-Waveform Inversion</span>
+        </div>
+        <h2 class="section-title">탄성파 완전파형역산</h2>
+        <p class="text-sm leading-relaxed mb-4" style="color:var(--text-body);">
+          완전파형역산(Full-Waveform Inversion, FWI)은 지진파의 전체 파형 정보를 활용하여 지하 매질의 물성(P파·S파 속도, 밀도 등)을 고해상도로 복원하는 역산 기법입니다. 기존의 주시(travel-time) 기반 역산과 달리 파형의 진폭, 위상, 도착시간을 모두 사용하므로 훨씬 세밀한 지하 모델을 얻을 수 있습니다.
+        </p>
+        <p class="text-sm leading-relaxed mb-6" style="color:var(--text-body);">
+          연구실에서는 <strong>주파수 도메인</strong> 및 <strong>시간 도메인</strong> FWI 알고리즘을 개발하고, <strong>비등방성 VTI 매질</strong>에 대한 다중 매개변수화 역산 전략을 연구합니다. 특히 회절각 필터링(DAF)을 활용한 파수 성분 제어 및 역시간 마이그레이션(RTM)과의 통합 적용을 탐구합니다.
+        </p>
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            주파수 도메인 / 시간 도메인 FWI
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            VTI 비등방성 매질 다중 매개변수 역산
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            회절각 필터링(DAF) 기반 파수 제어
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            역시간 마이그레이션(RTM) 통합 적용
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="rounded-xl overflow-hidden border aspect-video flex flex-col items-center justify-center gap-3" style="border-color:var(--gray-line);background:var(--gray-bg);box-shadow:var(--shadow-sm);">
+          <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="1.2" opacity="0.3" aria-hidden="true">
+            <path stroke-linecap="round" d="M2 12 Q4 5 6 12 Q8 19 10 12 Q12 5 14 12 Q16 19 18 12 Q20 5 22 12"/>
+          </svg>
+          <p class="text-xs text-center px-6" style="color:var(--text-sub);">FWI 연구 결과 그림<br>(velocity model tomogram)</p>
+          <p class="text-xs" style="color:#CBD5E1;">images/research-fwi.jpg</p>
+        </div>
+        <p class="text-xs mt-3 text-center italic" style="color:var(--text-sub);">
+          FWI를 통해 복원된 고해상도 P파 속도 모델 예시 (마르무시 모델)
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH AREA 2: MODELING -->
+<section id="modeling" class="section-py bg-gray">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <div class="reveal order-2 lg:order-1">
+        <div class="rounded-xl overflow-hidden border aspect-video flex flex-col items-center justify-center gap-3" style="border-color:var(--gray-line);background:var(--white);box-shadow:var(--shadow-sm);">
+          <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="1.2" opacity="0.3" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+          <p class="text-xs text-center px-6" style="color:var(--text-sub);">탄성파 스냅샷<br>(seismic wavefield snapshot)</p>
+          <p class="text-xs" style="color:#CBD5E1;">images/research-modeling.jpg</p>
+        </div>
+        <p class="text-xs mt-3 text-center italic" style="color:var(--text-sub);">
+          FDM 스태거드 그리드 기반 2D 탄성파 전파 스냅샷 시뮬레이션
+        </p>
+      </div>
+
+      <div class="reveal order-1 lg:order-2">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-8 rounded-full text-white text-sm font-bold flex items-center justify-center flex-shrink-0" style="background:var(--blue);">02</span>
+          <span class="text-xs font-semibold uppercase tracking-widest" style="color:var(--blue);">Seismic Wave Modeling</span>
+        </div>
+        <h2 class="section-title">탄성파 전파 모델링</h2>
+        <p class="text-sm leading-relaxed mb-4" style="color:var(--text-body);">
+          탄성파 전파 모델링은 FWI의 핵심 엔진인 <strong>전방 모사(forward modeling)</strong>를 담당합니다. 정확하고 효율적인 모델링 알고리즘은 고품질 역산 결과의 필수 전제입니다. 연구실에서는 유한차분법(FDM)의 스태거드 그리드 구현과 유한요소법(FEM) 기반 전방 모사 코드를 개발·검증합니다.
+        </p>
+        <p class="text-sm leading-relaxed mb-6" style="color:var(--text-body);">
+          Intel oneAPI + MKL + PARDISO 스파스 솔버를 활용한 고성능 주파수 도메인 솔버를 구축하고, OpenMP 병렬화를 통해 대규모 3D 모델링으로 확장을 추진합니다.
+        </p>
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            FDM 스태거드 그리드 (2D/3D)
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            FEM + PARDISO 주파수 도메인 솔버
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            VTI 의사-음향 파동방정식
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            OpenMP 기반 병렬 컴퓨팅
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH AREA 3: APPLIED GEOPHYSICS -->
+<section id="applied" class="section-py">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-8 rounded-full text-white text-sm font-bold flex items-center justify-center flex-shrink-0" style="background:var(--blue);">03</span>
+          <span class="text-xs font-semibold uppercase tracking-widest" style="color:var(--blue);">Applied Geophysics</span>
+        </div>
+        <h2 class="section-title">응용지구물리탐사</h2>
+        <p class="text-sm leading-relaxed mb-4" style="color:var(--text-body);">
+          전기비저항 토모그래피(ERT)와 유도분극(IP) 탐사, 항공자력탐사 등 다양한 지구물리 방법을 활용한 응용 연구를 수행합니다. 단일 방법의 한계를 극복하기 위해 다중 지구물리 데이터를 통합 해석하는 조인트 역산(joint inversion) 방법론을 개발합니다.
+        </p>
+        <p class="text-sm leading-relaxed mb-6" style="color:var(--text-body);">
+          2D/3D ERT 역산, 광상 탐사를 위한 복합 데이터 해석, 환경·지질 공학 문제에의 응용 등을 연구합니다.
+        </p>
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            전기비저항 토모그래피 (ERT) 2D/3D
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            유도분극(IP) 및 항공자력탐사
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            다중 지구물리 데이터 통합 역산
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            광상 탐사 및 환경·지질 공학 응용
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="rounded-xl overflow-hidden border aspect-video flex flex-col items-center justify-center gap-3" style="border-color:var(--gray-line);background:var(--gray-bg);box-shadow:var(--shadow-sm);">
+          <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="1.2" opacity="0.3" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 3v18M3 12h18"/>
+          </svg>
+          <p class="text-xs text-center px-6" style="color:var(--text-sub);">ERT 역산 결과<br>(resistivity section)</p>
+          <p class="text-xs" style="color:#CBD5E1;">images/research-ert.jpg</p>
+        </div>
+        <p class="text-xs mt-3 text-center italic" style="color:var(--text-sub);">
+          2D 전기비저항 토모그래피(ERT) 역산 단면 예시
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH AREA 4: ML -->
+<section id="ml" class="section-py bg-gray">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <div class="reveal order-2 lg:order-1">
+        <div class="rounded-xl overflow-hidden border aspect-video flex flex-col items-center justify-center gap-3" style="border-color:var(--gray-line);background:var(--white);box-shadow:var(--shadow-sm);">
+          <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="1.2" opacity="0.3" aria-hidden="true">
+            <circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/>
+            <path stroke-linecap="round" d="M12 7v4M12 11l-5 6M12 11l5 6"/>
+          </svg>
+          <p class="text-xs text-center px-6" style="color:var(--text-sub);">머신러닝 분류 결과<br>(prospectivity map)</p>
+          <p class="text-xs" style="color:#CBD5E1;">images/research-ml.jpg</p>
+        </div>
+        <p class="text-xs mt-3 text-center italic" style="color:var(--text-sub);">
+          SVM/RF/DNN 앙상블 기반 광상 탐사 예측 지도 예시
+        </p>
+      </div>
+
+      <div class="reveal order-1 lg:order-2">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-8 rounded-full text-white text-sm font-bold flex items-center justify-center flex-shrink-0" style="background:var(--blue);">04</span>
+          <span class="text-xs font-semibold uppercase tracking-widest" style="color:var(--blue);">Machine Learning for Geoscience</span>
+        </div>
+        <h2 class="section-title">지구과학 머신러닝</h2>
+        <p class="text-sm leading-relaxed mb-4" style="color:var(--text-body);">
+          지구물리 탐사 데이터와 지질 정보를 결합한 머신러닝 모델로 광물 탐사 예측 정확도를 높입니다. SVM, Random Forest, XGBoost, LightGBM, DNN 등 다양한 지도학습 기법을 활용한 암석 분류 및 예측 모델을 개발합니다.
+        </p>
+        <p class="text-sm leading-relaxed mb-6" style="color:var(--text-body);">
+          지구물리 데이터와 지구화학 데이터, 원격탐사 영상을 통합하는 다중 데이터 기반 예측 모델(prospectivity mapping)을 구축하고, 딥러닝을 활용한 탄성파 데이터 처리 자동화도 탐구합니다.
+        </p>
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            SVM / RF / XGBoost / DNN 암석 분류
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            다중 데이터 통합 광상 예측 (prospectivity mapping)
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            딥러닝 기반 탄성파 데이터 처리
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            PyTorch 기반 GPU 가속 구현
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH AREA 5: CCS -->
+<section id="ccs" class="section-py">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-8 rounded-full text-white text-sm font-bold flex items-center justify-center flex-shrink-0" style="background:var(--blue);">05</span>
+          <span class="text-xs font-semibold uppercase tracking-widest" style="color:var(--blue);">CCS Monitoring</span>
+        </div>
+        <h2 class="section-title">탄소포집저장 모니터링</h2>
+        <p class="text-sm leading-relaxed mb-4" style="color:var(--text-body);">
+          지구온난화 대응의 핵심 기술인 탄소포집저장(CCS)의 안전하고 효율적인 저장소 관리를 위해 4D 탄성파 탐사 기반 모니터링 기술을 개발합니다.
+        </p>
+        <p class="text-sm leading-relaxed mb-6" style="color:var(--text-body);">
+          CO₂ 주입에 따른 지하 저장층의 시계열 물성 변화를 4D FWI로 정밀하게 추적하고, 누출 위험 조기 감지 알고리즘을 개발합니다. KIGAM 재직 시 참여한 CCS 관련 연구 경험을 바탕으로 실용적인 모니터링 방법론을 구축합니다.
+        </p>
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            4D 탄성파 FWI 기반 시계열 역산
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            CO₂ 저장층 물성 변화 모니터링
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            누출 조기 감지 알고리즘 개발
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            에너지 전환 정책 지원 연구
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="rounded-xl overflow-hidden border aspect-video flex flex-col items-center justify-center gap-3" style="border-color:var(--gray-line);background:var(--gray-bg);box-shadow:var(--shadow-sm);">
+          <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="1.2" opacity="0.3" aria-hidden="true">
+            <path stroke-linecap="round" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+            <path stroke-linecap="round" d="M12 8v8M8 12h8"/>
+          </svg>
+          <p class="text-xs text-center px-6" style="color:var(--text-sub);">CCS 모니터링 결과<br>(4D difference section)</p>
+          <p class="text-xs" style="color:#CBD5E1;">images/research-ccs.jpg</p>
+        </div>
+        <p class="text-xs mt-3 text-center italic" style="color:var(--text-sub);">
+          4D FWI를 통한 CO₂ 주입 전후 속도 변화 단면 예시
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH AREA 6: WAVEFIELD SEPARATION -->
+<section id="wavefield" class="section-py bg-gray">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <div class="reveal order-2 lg:order-1">
+        <div class="rounded-xl overflow-hidden border aspect-video flex flex-col items-center justify-center gap-3" style="border-color:var(--gray-line);background:var(--white);box-shadow:var(--shadow-sm);">
+          <svg width="56" height="56" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="1.2" opacity="0.3" aria-hidden="true">
+            <path stroke-linecap="round" d="M3 12h4l2-6 4 12 2-6h6"/>
+          </svg>
+          <p class="text-xs text-center px-6" style="color:var(--text-sub);">파동장 분리 결과<br>(P/S wave decomposition)</p>
+          <p class="text-xs" style="color:#CBD5E1;">images/research-wavefield.jpg</p>
+        </div>
+        <p class="text-xs mt-3 text-center italic" style="color:var(--text-sub);">
+          텐서 트레인 분해를 활용한 qP/qSV 파동장 분리 결과 예시
+        </p>
+      </div>
+
+      <div class="reveal order-1 lg:order-2">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-8 h-8 rounded-full text-white text-sm font-bold flex items-center justify-center flex-shrink-0" style="background:var(--blue);">06</span>
+          <span class="text-xs font-semibold uppercase tracking-widest" style="color:var(--blue);">Wavefield Separation</span>
+        </div>
+        <h2 class="section-title">파동장 분리 기법</h2>
+        <p class="text-sm leading-relaxed mb-4" style="color:var(--text-body);">
+          탄성파 파동장을 P파(qP)·SV파(qSV)·SH파(qSH) 모드로 분리하는 것은 다성분 탄성파 역산의 핵심 전처리 과정입니다. 비등방성 VTI 매질에서의 정확한 파동 모드 분리는 이방성 FWI의 신뢰도를 크게 높입니다.
+        </p>
+        <p class="text-sm leading-relaxed mb-6" style="color:var(--text-body);">
+          텐서 트레인(Tensor Train, TT) 분해 방법론을 파동장 분리에 적용하고, 계산 효율성을 보장하면서 3D로 확장하는 연구를 수행합니다. Geophysics 저널에 게재된 연구 성과를 바탕으로 후속 연구를 진행 중입니다.
+        </p>
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            qP / qSV / qSH 탄성파 모드 분리
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            텐서 트레인(TT) 분해 기법 적용
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            2D → 3D 확장 연구
+          </div>
+          <div class="flex items-center gap-2 text-sm" style="color:var(--text-body);">
+            <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            다성분 탄성파 역산 전처리 통합
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS / METHODS SUMMARY -->
+<section class="section-py">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12 reveal">
+      <h2 class="section-title centered mx-auto inline-block">연구 방법 및 도구</h2>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 reveal">
+
+      <div class="text-center p-4 rounded-lg border bg-white transition-all hover:shadow-md" style="border-color:var(--gray-line);">
+        <p class="text-xs font-bold mb-1" style="color:var(--text-main);">Python</p>
+        <p class="text-xs" style="color:var(--text-sub);">PyTorch / NumPy / SciPy</p>
+      </div>
+      <div class="text-center p-4 rounded-lg border bg-white transition-all hover:shadow-md" style="border-color:var(--gray-line);">
+        <p class="text-xs font-bold mb-1" style="color:var(--text-main);">Fortran</p>
+        <p class="text-xs" style="color:var(--text-sub);">Modern Fortran 2008/2018</p>
+      </div>
+      <div class="text-center p-4 rounded-lg border bg-white transition-all hover:shadow-md" style="border-color:var(--gray-line);">
+        <p class="text-xs font-bold mb-1" style="color:var(--text-main);">MKL / PARDISO</p>
+        <p class="text-xs" style="color:var(--text-sub);">Sparse solver (FEM)</p>
+      </div>
+      <div class="text-center p-4 rounded-lg border bg-white transition-all hover:shadow-md" style="border-color:var(--gray-line);">
+        <p class="text-xs font-bold mb-1" style="color:var(--text-main);">OpenMP</p>
+        <p class="text-xs" style="color:var(--text-sub);">Shared-memory parallel</p>
+      </div>
+      <div class="text-center p-4 rounded-lg border bg-white transition-all hover:shadow-md" style="border-color:var(--gray-line);">
+        <p class="text-xs font-bold mb-1" style="color:var(--text-main);">GPU (MPS/CUDA)</p>
+        <p class="text-xs" style="color:var(--text-sub);">PyTorch acceleration</p>
+      </div>
+      <div class="text-center p-4 rounded-lg border bg-white transition-all hover:shadow-md" style="border-color:var(--gray-line);">
+        <p class="text-xs font-bold mb-1" style="color:var(--text-main);">Matplotlib</p>
+        <p class="text-xs" style="color:var(--text-sub);">Publication figures</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH PROJECTS -->
+<section class="section-py border-t" style="background:var(--gray-bg);border-color:var(--gray-line);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12 reveal">
+      <h2 class="section-title centered mx-auto inline-block">연구 과제</h2>
+      <p class="text-xs mt-2" style="color:var(--text-sub);">Research Projects</p>
+    </div>
+
+    <div class="max-w-3xl mx-auto reveal">
+      <div class="bg-white rounded-xl p-6 sm:p-8 border" style="border-color:var(--gray-line);box-shadow:0 1px 3px rgba(0,0,0,0.04);">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:var(--blue-lt);">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          </div>
+          <div>
+            <p class="text-xs font-medium mb-1" style="color:var(--blue);">한국연구재단 (NRF) &middot; 생애첫연구사업</p>
+            <h3 class="text-sm sm:text-base font-bold leading-snug" style="color:var(--text-main);">사전 학습을 이용한 딥러닝 기반 탄성파 자료처리 기술 개발</h3>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-y-3 gap-x-6 text-xs" style="color:var(--text-body);">
+          <div>
+            <p class="font-medium mb-0.5" style="color:var(--text-sub);">연구기간</p>
+            <p>2023.03 &ndash; 2026.02 (3년)</p>
+          </div>
+          <div>
+            <p class="font-medium mb-0.5" style="color:var(--text-sub);">현재 단계</p>
+            <p>3차년도 (진행중)</p>
+          </div>
+          <div>
+            <p class="font-medium mb-0.5" style="color:var(--text-sub);">총 연구비</p>
+            <p>94,500,000원</p>
+          </div>
+          <div>
+            <p class="font-medium mb-0.5" style="color:var(--text-sub);">지원기관</p>
+            <p>(교육부) 한국연구재단</p>
+          </div>
+          <div>
+            <p class="font-medium mb-0.5" style="color:var(--text-sub);">수행기관</p>
+            <p>경상국립대학교</p>
+          </div>
+          <div>
+            <p class="font-medium mb-0.5" style="color:var(--text-sub);">연구책임자</p>
+            <p>신영재</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b footer-divider">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <img src="images/logo.png" alt="GNU 지구물리 연구실" class="footer-logo-img" width="30" height="30" />
+          <span class="footer-brand">GNU Geophysics Lab</span>
+        </div>
+        <p class="text-xs leading-relaxed" style="color:var(--text-sub);">경상국립대학교 지질과학과 지구물리 연구실</p>
+      </div>
+      <div>
+        <p class="footer-heading">Quick Links</p>
+        <ul class="space-y-1.5">
+          <li><a href="index.html"        class="text-xs">Home</a></li>
+          <li><a href="members.html"      class="text-xs">Members</a></li>
+          <li><a href="publications.html" class="text-xs">Publications</a></li>
+          <li><a href="contact.html"      class="text-xs">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Contact</p>
+        <address class="not-italic space-y-1.5">
+          <p class="text-xs">경상남도 진주시 진주대로 501</p>
+          <p class="text-xs"><a href="mailto:shin542@gnu.ac.kr">shin542@gnu.ac.kr</a></p>
+        </address>
+      </div>
+    </div>
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-xs" style="color:var(--text-sub);">&copy; 2024–2025 GNU Geophysics Lab. All rights reserved.</p>
+      <p class="text-xs" style="color:#94A3B8;">Prof. 신영재 (Shin Youngjae)</p>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="맨 위로" style="position:fixed;bottom:1.75rem;right:1.75rem;width:44px;height:44px;border-radius:50%;background:var(--blue);color:white;border:none;cursor:pointer;box-shadow:0 4px 14px rgba(59,130,246,0.35);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.25s;z-index:500;">
+  <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
