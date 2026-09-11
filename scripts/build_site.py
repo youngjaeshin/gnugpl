@@ -71,13 +71,44 @@ def profile_history(items, kind):
         period = item['start'] + '–' + (item['end'] or '현재')
         detail = (item['degree'] + ' · ' + item['field']) if kind == 'education' else item['position']
         rows.append(f'<li><span class="profile-period">{escape(period)}</span>'
-                    f'<p><strong>{escape(item["institution"])}</strong> {escape(item["department"])} · {escape(detail)}</p></li>')
+                    f'<p><strong>{escape(item.get("display_institution", item["institution"]))}</strong> {escape(item["department"])} · {escape(detail)}</p></li>')
     return '<ol class="profile-timeline">' + ''.join(rows) + '</ol>'
+
+
+def member_card(person, label='', publications_count=None):
+    photo_html = ''
+    photo = person.get('photo')
+    if photo:
+        src = photo['src']
+        if not src.startswith('images/') or '..' in Path(src).parts or not (ROOT / src).is_file():
+            raise ValueError('Member photo requires an existing local image: ' + src)
+        photo_html = (f'<img class="profile-photo" src="{escape(src)}" '
+                      f'width="{int(photo["width"])}" height="{int(photo["height"])}" alt="{escape(person["name_ko"])} 사진">')
+    details = []
+    if person.get('research_summary'):
+        details.append('<section class="profile-focus"><h3>주요 연구</h3><p>' + escape(person['research_summary']) + '</p></section>')
+    for kind, title in [('education', '학력'), ('career', '경력')]:
+        if person.get(kind):
+            details.append(f'<section class="profile-history"><h3>{title}</h3>{profile_history(person[kind], kind)}</section>')
+    if publications_count is not None:
+        details.append(f'<a class="text-link profile-publications" href="publications.html">연구 논문 {publications_count}편 보기</a>')
+    role = person['role_ko'] + (' / ' + person['role_en'] if person.get('role_en') else '')
+    values = dict(
+        MEMBER_LABEL=f'<h2 class="member-role-heading">{escape(label)}</h2>' if label else '',
+        MEMBER_PHOTO=photo_html, MEMBER_NAME=escape(person['name_ko']),
+        MEMBER_ENGLISH='<p class="profile-english">' + escape(person['name_en']) + '</p>' if person.get('name_en') else '',
+        MEMBER_ROLE=escape(role), MEMBER_AFFILIATION=escape(person.get('affiliation', '')),
+        MEMBER_SPECIALIZATION='<p class="profile-specialization">전공: ' + escape(person['specialization']) + '</p>' if person.get('specialization') else '',
+        MEMBER_EMAIL=f'<a class="text-link" href="mailto:{escape(person["email"])}">{escape(person["email"])}</a>' if person.get('email') else '',
+        MEMBER_DETAILS='\n'.join(details),
+    )
+    return fill((ROOT / 'templates/partials/member-card.html').read_text(), values)
 
 
 def main():
     site = read_json('data/site.json')
     profile = read_json('data/profile.json')
+    researchers = read_json('data/researchers.json')
     papers = read_json('papers/metadata.json')
     papers = sorted(papers, key=lambda p: p['year'], reverse=True)
     assert len({p['doi'].lower() for p in papers}) == len(papers), 'Duplicate DOI'
@@ -105,28 +136,21 @@ def main():
     assert profile['career'][0]['position'] == site['rank_ko'], 'Profile/site rank mismatch'
     assert profile['career'][0]['start'] == site['promotion_date'], 'Profile/site promotion date mismatch'
     assert profile['career'][1]['start'] == site['appointment_date'], 'Profile/site appointment date mismatch'
-    career = profile_history(profile['career'], 'career')
-    photo = profile['photo']
     featured = papers[0]
     date = featured.get('published_online')
     featured_date = f'{date[:4]}년 {int(date[5:7])}월' if date else f'{featured["year"]}년'
-    members = site['members']
-    member_summary = (f'현재 연구실은 {escape(members[0]["name_ko"])} 교수 1인으로 구성되어 있습니다.'
-                      if len(members) == 1 and members[0]['kind'] == 'faculty'
-                      else f'현재 연구실은 총 {len(members)}명으로 구성되어 있습니다.')
+    professor = dict(profile, role_ko=site['rank_ko'], role_en=site['rank_en'],
+                     affiliation=site['department'], email=site['email'],
+                     research_summary=', '.join(a['title'] for a in research) + '.')
     common = dict(EMAIL=escape(site['email']), RANK=escape(site['rank_ko'] + ' / ' + site['rank_en']),
                   INTRO=escape(site['intro']),
-                  PROFILE_NAME_KO=escape(profile['name_ko']), PROFILE_NAME_EN=escape(profile['name_en']),
-                  PROFILE_PHOTO=f'<img class="profile-photo" src="{escape(photo["src"])}" width="{photo["width"]}" height="{photo["height"]}" alt="신영재 교수 사진">',
-                  PROFILE_SPECIALIZATION=escape(profile['specialization']),
-                  PROFILE_RESEARCH=escape(', '.join(a['title'] for a in research) + '.'),
-                  EDUCATION=profile_history(profile['education'], 'education'),
-                  RANK_KO=escape(site['rank_ko']), CAREER=career, PUB_COUNT=len(papers),
+                  RANK_KO=escape(site['rank_ko']), PUB_COUNT=len(papers),
                   YEAR=site['updated'][:4], UPDATED=site['updated'].replace('-', '.'),
                   PUBLICATIONS='\n'.join(map(paper_html, papers)), YEAR_FILTERS=filters,
                   NEWS='\n'.join(news), GALLERY=gallery_html(read_json('data/gallery.json')),
                   FEATURED_DATE=featured_date,
-                  MEMBER_SUMMARY=member_summary,
+                  PROFESSOR_CARD=member_card(professor, '지도교수', len(papers)),
+                  RESEARCHER_CARDS='\n'.join(member_card(person) for person in researchers),
                   RESEARCH_HOME='\n'.join(research_home), RESEARCH_SECTIONS='\n'.join(research_sections),
                   FEATURED_PAPER=f'<h2>{escape(featured["title"])}</h2><p>{citation(featured)}</p><div class="pub-links">{paper_links(featured)}</div>')
     for slug, label in PAGES:

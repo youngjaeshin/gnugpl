@@ -31,7 +31,8 @@ npm run preview
 | `raw/relocations.json` | 이동한 기존 파일의 이전/현재 경로와 보존 확인 해시 |
 | `papers/metadata.json` | 홈페이지 논문 목록을 생성하는 검증된 서지정보 |
 | `papers/*.pdf` | 서지정보 검증용 로컬 PDF. 홈페이지 링크/배포에 포함하지 않음 |
-| `data/site.json` | 현재 직급·승진일·임용일·구성원·이메일·업데이트 날짜 |
+| `data/site.json` | 현재 직급·승진일·임용일·이메일·홈 기본 정보 |
+| `data/researchers.json` | 추가 연구원의 프로필 목록. 현재 빈 배열 |
 | `data/profile.json` | 검증된 학력 2건·경력 4건·전공·프로필 사진·원본 해시 |
 | `raw/profile/` | 이력서·증명사진 원본의 로컬 보관본. Git/배포 제외 |
 | `data/research.json` | 세 연구 분야의 명칭·설명·주제. 홈과 Research에 공통 반영 |
@@ -61,7 +62,8 @@ npm run preview
 
 - 학력·전체 경력·전공·사진은 `data/profile.json`에서 관리합니다. 현재 직급·승진일·임용일은 `data/site.json`과 일치해야 하며 빌드 시 확인합니다.
 - 구성원 페이지의 주요 연구는 `data/research.json`에서 한 문장으로 생성합니다. 긴 연구 설명을 이 페이지에 중복 작성하지 않습니다.
-- 현재 연구실 구성원은 신영재 교수 1명으로 사용자 확인을 받았습니다. 학생이 합류하면 구성원 데이터와 `templates/pages/members.html`의 소개를 함께 수정합니다.
+- 지도교수와 연구원은 `templates/partials/member-card.html`의 같은 카드 형식으로 생성됩니다. 왼쪽 사진/이름, 오른쪽 주요 연구/학력/경력이며, 이력은 간결한 행 형식입니다.
+- 현재 연구원은 없어 제목 아래 빈 영역만 표시합니다. 연구원이 합류하면 `data/researchers.json`에 정보를 추가하고 build합니다. 페이지 HTML을 복사할 필요가 없습니다.
 - 갤러리 사진은 `images/`에 넣고 `data/gallery.json`에 아래처럼 등록합니다. 파일을 폴더에 복사하는 것만으로는 공개되지 않습니다.
 
 ```json
@@ -92,3 +94,11 @@ GitHub Pages는 사용하지 않습니다. Vercel에 저장소를 연결하면 `
 사용자 요청에 따라 홈페이지에는 논문의 서지정보와 DOI 링크만 제공합니다. PDF 보기 버튼을 생성하지 않으며 패키징 단계에서 PDF 경로 자체를 허용하지 않습니다. `npm run check`는 HTML의 PDF 링크와 배포 폴더의 PDF 포함을 차단합니다.
 
 서지정보 검증용 PDF와 원본은 로컬에 보존합니다. 기존 GitHub 저장소에 이미 올라간 PDF는 웹사이트 배포 파일에서 제외하는 것과 별개이며, 최신 커밋에서 PDF 파일을 제거해도 과거 Git 이력까지 삭제되지는 않습니다.
+
+## 연구원 추가 형식
+
+`data/researchers.json`은 배열입니다. 각 항목의 필수 값은 `name_ko`, `role_ko`입니다. `name_en`, `role_en`, `affiliation`, `email`, `specialization`, `research_summary`를 선택적으로 넣을 수 있습니다. 사진은 `photo` 객체에 `src`(images/ 아래 실제 파일), `width`, `height`를 넣습니다. `education`과 `career` 배열은 `data/profile.json`과 같은 항목 구조를 사용합니다. 비어 있는 항목은 카드에 표시하지 않으며, 여러 명은 배열 순서대로 아래에 추가됩니다.
+
+운영 주소: https://gnugpl.vercel.app · GitHub main에 연결되어 있습니다.
+
+학력 메타데이터는 `institution`(서울대학교), `college`(공과대학), `program_level`(학부/대학원), `department`, `degree`, `field`로 구분합니다. 이력서의 원래 기관 표기는 `source_institution`에만 보존합니다. 화면은 학교명·학과·학위를 간결하게 표시합니다.

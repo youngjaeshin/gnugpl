@@ -8,12 +8,5 @@
   "appointment_date": "2022.09",
   "email": "shin542@gnu.ac.kr",
   "department": "경상국립대학교 지질과학과",
-  "members": [
-    {
-      "name_ko": "신영재",
-      "name_en": "Shin Youngjae",
-      "kind": "faculty"
-    }
-  ],
   "intro": "지구물리학과 머신러닝을 바탕으로 다양한 분야의 응용 연구를 수행합니다."
 }

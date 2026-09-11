@@ -66,3 +66,7 @@
 - 2026.09–현재 같은 학과 부교수(사용자 직접 확인).
 
 이력/경력과 증명사진 출처·해시는 data/profile.json과 raw/manifest.json에 기록했다. 생년월일·자택 주소 등은 공개 데이터와 HTML에 넣지 않았다. 원본 CV는 로컬 raw/profile에 보관하고 Git/배포에서 제외했다.
+
+## 학력 표기 통일
+
+학력의 기관 표시는 두 항목 모두 '서울대학교'로 통일하고 학과와 학위로 구분한다. 사용자 확인에 따라 메타데이터도 institution=서울대학교, college=공과대학으로 통일하고 program_level로 학부/대학원을 구분한다. 이력서의 원래 기관 표기(서울대학교 대학원/서울대학교 공과대학)는 source_institution에만 출처 이력으로 유지한다. 서울대학교 공식 [대학원 에너지시스템공학부 안내](https://eng.snu.ac.kr/academics/graduate-programs/energy-systems-engineering)와 [학부 에너지자원공학과 안내](https://eng.snu.ac.kr/academics/undergraduate-programs/energy-resources-engineering)를 확인했다.

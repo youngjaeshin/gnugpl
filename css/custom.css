@@ -224,28 +224,33 @@ p, li, dd { word-break: keep-all; overflow-wrap: anywhere; }
 .image-credit a { text-decoration: underline; }
 
 
-.member-profile { padding-block: 36px 40px; }
-.profile-summary { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; padding-bottom: 28px; }
-.profile-identity { display: flex; gap: 24px; align-items: center; }
-.profile-photo { display: block; width: 108px; height: auto; flex-shrink: 0; border-radius: 4px; }
-.profile-identity h2 { font-size: 28px; line-height: 1.25; }
+
+.members-list { padding-block: 36px 48px; }
+.member-profile { display: grid; grid-template-columns: 245px 1fr; gap: 48px; padding-block: 0 32px; }
+.profile-identity { min-width: 0; }
+.member-role-heading { font-size: 22px; margin-bottom: 20px; }
+.profile-photo { display: block; width: 120px; height: auto; margin-bottom: 18px; border-radius: 4px; }
+.profile-identity-text h3 { font-size: 27px; line-height: 1.25; }
 .profile-english { font-family: Georgia, serif; font-size: 18px; margin-top: 4px; }
 .profile-rank { font-weight: 600; color: var(--blue); margin-top: 8px; }
 .profile-identity-text > p, .profile-identity-text > a { font-size: 14px; line-height: 1.7; }
 .profile-specialization { color: var(--text-sub); }
 .profile-identity .text-link { margin-top: 6px; }
-.profile-focus h2 { font-size: 19px; margin-bottom: 8px; }
+.profile-details { min-width: 0; padding-top: 4px; }
+.profile-focus { margin-bottom: 20px; }
+.profile-focus h3 { font-size: 18px; margin-bottom: 8px; }
 .profile-focus p { font-size: 15px; color: var(--text-sub); line-height: 1.7; }
-.profile-focus .text-link { font-size: 14px; margin-top: 12px; }
-.profile-history { display: grid; grid-template-columns: 72px 1fr; gap: 20px; padding-block: 14px; border-top: 1px solid var(--gray-line); }
-.profile-history > h2 { font-size: 19px; padding-top: 6px; }
+.profile-history { display: grid; grid-template-columns: 48px 1fr; gap: 14px; padding-block: 12px; border-top: 1px solid var(--gray-line); }
+.profile-history > h3 { font-size: 18px; padding-top: 5px; }
 .profile-timeline { list-style: none; margin: 0; padding: 0; }
-.profile-timeline li { display: grid; grid-template-columns: 148px 1fr; gap: 20px; padding-block: 6px; align-items: baseline; }
-.profile-period { font-size: 14px; white-space: nowrap; color: var(--text-sub); }
-.profile-timeline p { margin: 0; font-size: 15px; line-height: 1.7; }
-.member-join { padding-block: 24px; border-top: 1px solid var(--gray-line); }
-.member-join > .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; font-size: 14px; }
-.member-join .text-link { white-space: nowrap; }
+.profile-timeline li { display: grid; grid-template-columns: 137px 1fr; gap: 16px; padding-block: 5px; align-items: baseline; }
+.profile-period { font-size: 13px; white-space: nowrap; color: var(--text-sub); }
+.profile-timeline p { margin: 0; font-size: 14px; line-height: 1.7; }
+.profile-publications { font-size: 14px; margin-top: 12px; }
+.researchers-section { border-top: 1px solid var(--gray-line); padding-top: 28px; }
+.researchers-section > h2 { font-size: 25px; margin-bottom: 24px; }
+.researchers-list:empty { min-height: 70px; }
+.researchers-list .member-profile + .member-profile { border-top: 1px solid var(--gray-line); padding-top: 28px; }
 .research-area:first-child { border-top: 0; }
-@media(max-width:959px) { .profile-summary { grid-template-columns: 1fr; gap: 24px; } .profile-history { grid-template-columns: 60px 1fr; gap: 16px; } .profile-timeline li { grid-template-columns: 140px 1fr; gap: 14px; } }
-@media(max-width:700px) { .member-profile { padding-block: 28px; } .profile-identity { gap: 18px; } .profile-photo { width: 86px; } .profile-identity h2 { font-size: 25px; } .profile-history { grid-template-columns: 1fr; gap: 10px; } .profile-history > h2 { padding-top: 0; } .profile-timeline li { grid-template-columns: 1fr; gap: 2px; padding-block: 7px; } .profile-timeline p { font-size: 14px; } .member-join > .container { display: block; } .member-join .text-link { margin-top: 12px; } }
+@media(max-width:959px) { .member-profile { grid-template-columns: 195px 1fr; gap: 30px; } .profile-history { grid-template-columns: 1fr; gap: 8px; } .profile-timeline li { grid-template-columns: 1fr; gap: 2px; } }
+@media(max-width:700px) { .members-list { padding-block: 28px; } .member-profile { grid-template-columns: 1fr; gap: 26px; } .profile-photo { width: 100px; } .profile-identity-text h3 { font-size: 25px; } .profile-history > h3 { padding-top: 0; } .profile-timeline li { padding-block: 6px; } .researchers-list:empty { min-height: 48px; } }

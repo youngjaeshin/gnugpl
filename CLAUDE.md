@@ -47,3 +47,5 @@ Run `npm run check` after rebuilding. Inspect desktop and phone layouts after vi
 The final user decision combines anisotropy with seismic data processing and imaging. RTM and FWI belong in that combined field; do not introduce a separate anisotropy field.
 
 Publication policy: show bibliographic records and DOI links only. Never add PDF download/view links or include PDFs in dist/. Keep local source PDFs for metadata validation.
+
+Members layout: a shared `templates/partials/member-card.html` renders the professor and entries from `data/researchers.json`. Left: photo/name; right: concise research, education and career. Show 지도교수 above the faculty photo and a separate 연구원 heading below. Keep the researcher section blank when its array is empty.

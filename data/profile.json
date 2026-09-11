@@ -8,18 +8,24 @@
     {
       "start": "2014.03",
       "end": "2019.08",
-      "institution": "서울대학교 대학원",
+      "institution": "서울대학교",
       "department": "에너지시스템공학부",
       "degree": "공학박사",
-      "field": "물리탐사"
+      "field": "물리탐사",
+      "source_institution": "서울대학교 대학원",
+      "college": "공과대학",
+      "program_level": "대학원"
     },
     {
       "start": "2008.03",
       "end": "2014.02",
-      "institution": "서울대학교 공과대학",
+      "institution": "서울대학교",
       "department": "에너지자원공학과",
       "degree": "공학학사",
-      "field": "자원공학"
+      "field": "자원공학",
+      "source_institution": "서울대학교 공과대학",
+      "college": "공과대학",
+      "program_level": "학부"
     }
   ],
   "source_sha256": "8c3455076228bbf1f2b89ee9cd7330bd099d607ac3b927f9c94cd244e64c70b6",
@@ -66,5 +72,13 @@
       "position": "연수연구원"
     }
   ],
-  "research_fields_source": "data/research.json"
+  "research_fields_source": "data/research.json",
+  "education_naming": {
+    "confirmed_on": "2026-09-11",
+    "basis": "사용자 확인 및 서울대학교 공식 학부/대학원 안내",
+    "institution": "대학교 명칭",
+    "college": "단과대학",
+    "program_level": "학부 또는 대학원",
+    "source_institution": "이력서 원문 표기, 화면에 사용하지 않음"
+  }
 }
