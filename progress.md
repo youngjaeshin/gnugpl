@@ -1,3 +1,5 @@
+> **최종 상태 (2026-09-11 세션 종료):** 사용자 만족 확인. https://gnugpl.vercel.app 운영 배포 완료, 기능 기준 main 998a2ce. 미완료 작업 없음. 최종 합의/재개 절차는 [docs/SESSION_HANDOFF.md](docs/SESSION_HANDOFF.md)를 먼저 읽는다. 아래에는 중간 변경 이력이 포함되어 있으며 최종 합의가 우선한다.
+
 # 진행 기록
 
 ## 2026-09-11 — started
@@ -108,3 +110,10 @@
 - institution=서울대학교, college=공과대학, program_level=학부/대학원으로 정규화.
 - 원문 표기는 source_institution에 출처로만 보관. 홈페이지용 표기와 기준 데이터 일치.
 - 변경사항 커밋/푸시 후 운영 배포 업데이트 진행.
+
+## 2026-09-11 — 사용자 승인 및 세션 종료
+- 사용자가 결과에 만족한다고 확인하고, 후속 업데이트 요청 전까지 작업 종료를 요청함.
+- 기능 기준 998a2ce의 Vercel Production Ready / GitHub success 확인. 운영 주소 https://gnugpl.vercel.app.
+- 최종 학력 분류, 구성원 배치, 빈 연구원 영역, 세 연구 분야, DOI-only 정책, 원본 보존 범위, 검증/배포 절차를 SESSION_HANDOFF.md와 SESSION_NOTES.md에 정리.
+- 다음 세션: 추가 요청이 있을 때 해당 메타데이터/템플릿만 변경. 임의의 재설계나 원본/과거 Git 이력 변경을 하지 않음.
+- 세션 종료 정리: 해당 프로젝트의 로컬 http.server(8765) 종료. 운영 Vercel 사이트는 유지.

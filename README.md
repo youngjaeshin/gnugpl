@@ -1,5 +1,7 @@
 # GNU Geophysics Lab 홈페이지
 
+최종 승인 상태와 다음 세션 안내: [SESSION_HANDOFF.md](docs/SESSION_HANDOFF.md).
+
 경상국립대학교 지구물리 연구실 홈페이지. 2026-09-11 기준 게재 논문 13편, 구성원 신영재 부교수 1명.
 
 ## 미리보기와 검증

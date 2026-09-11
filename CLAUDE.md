@@ -1,6 +1,6 @@
 # GNU Geophysics Lab website
 
-Read README.md for the current layout and maintenance workflow. This file replaces the obsolete March 2026 instructions.
+Read docs/SESSION_HANDOFF.md for the user-approved final state, then README.md for the maintenance workflow. This file replaces the obsolete March 2026 instructions.
 
 ## Architecture
 
