@@ -1,0 +1,20 @@
+{
+  "name": "gnu-geophysics-lab",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "python3 scripts/build_site.py && npm run build:css && python3 scripts/package_site.py",
+    "build:css": "tailwindcss -c tailwind.config.cjs -i css/tailwind.input.css -o css/tailwind.css --minify",
+    "check": "python3 scripts/validate_site.py --site-only && node --check js/main.js",
+    "preview": "python3 -m http.server 8765 --bind 127.0.0.1 --directory dist",
+    "check:browser": "node scripts/browser_check.cjs",
+    "check:sources": "python3 scripts/validate_site.py && node --check js/main.js"
+  },
+  "devDependencies": {
+    "puppeteer-core": "25.10.0",
+    "tailwindcss": "3.4.19"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — GNU Geophysics Lab</title>
+  <meta name="description" content="GNU 지구물리 연구실의 연구 분야: 탄성파 자료처리 및 영상화, 지구과학 머신러닝, 응용지구물리탐사." />
+
+  <link rel="icon" type="image/png" href="images/logo-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tailwind.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body>
+<a class="skip-link" href="#main-content">본문으로 바로가기</a>
+
+<!-- NAVBAR -->
+{{NAV}}
+<main id="main-content" tabindex="-1">
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span>Research</span>
+    </div>
+    <h1 class="page-hero-title">연구 분야</h1>
+    <p class="page-hero-sub">Research Areas</p>
+  </div>
+</div>
+
+<div class="container research-areas">{{RESEARCH_SECTIONS}}</div>
+<div class="container research-publications-link"><a class="text-link" href="publications.html">논문 목록에서 연구업적 보기</a></div>
+<section class="section-py border-t" style="background:var(--gray-bg);border-color:var(--gray-line);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12 reveal">
+      <h2 class="section-title centered mx-auto inline-block">연구 과제</h2>
+      <p class="text-xs mt-2" style="color:var(--text-sub);">Research Projects</p>
+    </div>
+
+    <div class="max-w-3xl mx-auto reveal">
+      <div class="bg-white rounded-xl p-6 sm:p-8 border" style="border-color:var(--gray-line);box-shadow:0 1px 3px rgba(0,0,0,0.04);">
+        <div class="flex items-start gap-4 mb-4">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:var(--blue-lt);">
+            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="var(--blue)" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+          </div>
+          <div>
+            <p class="text-xs font-medium mb-1" style="color:var(--blue);">한국연구재단 (NRF) &middot; 생애첫연구사업</p>
+            <h3 class="text-sm sm:text-base font-bold leading-snug" style="color:var(--text-main);">사전 학습을 이용한 딥러닝 기반 탄성파 자료처리 기술 개발</h3>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-y-3 gap-x-6 text-xs" style="color:var(--text-body);">
+          <div>
+            <p class="font-medium mb-0.5" style="color:var(--text-sub);">연구기간</p>
+            <p>2023.03 &ndash; 2026.02 (3년)</p>
+          </div>
+          <div>
+            <p class="font-medium mb-0.5" style="color:var(--text-sub);">총 연구비</p>
+            <p>94,500,000원</p>
+          </div>
+          <div>
+            <p class="font-medium mb-0.5" style="color:var(--text-sub);">지원기관</p>
+            <p>(교육부) 한국연구재단</p>
+          </div>
+          <div>
+            <p class="font-medium mb-0.5" style="color:var(--text-sub);">수행기관</p>
+            <p>경상국립대학교</p>
+          </div>
+          <div>
+            <p class="font-medium mb-0.5" style="color:var(--text-sub);">연구책임자</p>
+            <p>신영재</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</main>
+{{FOOTER}}
+
+<button hidden id="back-to-top" aria-label="맨 위로" style="position:fixed;bottom:1.75rem;right:1.75rem;width:44px;height:44px;border-radius:50%;background:var(--blue);color:white;border:none;cursor:pointer;box-shadow:0 4px 14px rgba(59,130,246,0.35);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.25s;z-index:500;">
+  <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+{
+  "verified_on": "2026-09-11",
+  "name_hanja": "愼英宰",
+  "specialization": "물리탐사",
+  "source": "raw/profile/이력서_신영재.pdf",
+  "source_document_date": "2022-12-04",
+  "education": [
+    {
+      "start": "2014.03",
+      "end": "2019.08",
+      "institution": "서울대학교 대학원",
+      "department": "에너지시스템공학부",
+      "degree": "공학박사",
+      "field": "물리탐사"
+    },
+    {
+      "start": "2008.03",
+      "end": "2014.02",
+      "institution": "서울대학교 공과대학",
+      "department": "에너지자원공학과",
+      "degree": "공학학사",
+      "field": "자원공학"
+    }
+  ],
+  "source_sha256": "8c3455076228bbf1f2b89ee9cd7330bd099d607ac3b927f9c94cd244e64c70b6",
+  "name_ko": "신영재",
+  "name_en": "Shin Youngjae",
+  "photo": {
+    "src": "images/shin-youngjae.jpg",
+    "source": "raw/profile/신영재_증명사진.jpg",
+    "width": 354,
+    "height": 472,
+    "sha256": "9738a5c457cc0686d2e690021bb82c34b0055f00dccb13e17fec07592941c708"
+  },
+  "career": [
+    {
+      "start": "2026.09",
+      "end": null,
+      "institution": "경상국립대학교",
+      "department": "지질과학과",
+      "position": "부교수",
+      "position_en": "Associate Professor",
+      "source": "사용자 확인 (2026-09-11)"
+    },
+    {
+      "start": "2022.09",
+      "end": "2026.08",
+      "institution": "경상국립대학교",
+      "department": "지질과학과",
+      "position": "조교수",
+      "position_en": "Assistant Professor",
+      "source": "이력서 및 사용자 부교수 승진 확인"
+    },
+    {
+      "start": "2019.11",
+      "end": "2022.08",
+      "institution": "한국지질자원연구원",
+      "department": "광물자원연구본부",
+      "position": "연수연구원"
+    },
+    {
+      "start": "2019.09",
+      "end": "2019.10",
+      "institution": "서울대학교",
+      "department": "에너지자원신기술연구소",
+      "position": "연수연구원"
+    }
+  ],
+  "research_fields_source": "data/research.json"
+}

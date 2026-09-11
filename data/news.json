@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2026.09",
+    "type": "소식",
+    "text": "신영재 교수 부교수 승진",
+    "href": "members.html"
+  },
+  {
+    "date": "2026.05",
+    "type": "논문",
+    "text": "수중 음파 전파를 위한 음향–탄성 결합 유한요소 모델링 논문 게재 — Journal of Seismic Exploration",
+    "doi": "10.36922/JSE026100045"
+  },
+  {
+    "date": "2026.01",
+    "type": "논문",
+    "text": "텐서트레인 기반 VTI 매질 탄성파 파동장 분리 논문 게재 — Applied Sciences",
+    "doi": "10.3390/app16020569"
+  },
+  {
+    "date": "2025.04",
+    "type": "논문",
+    "text": "Cross-Attention U-Net을 활용한 탄성파 파동장 분리 논문 게재 — Applied Sciences",
+    "doi": "10.3390/app15074019"
+  },
+  {
+    "date": "2025.03",
+    "type": "논문",
+    "text": "흑연 공급망과 과제에 관한 논문 게재 — Geosciences Journal",
+    "doi": "10.1007/s12303-025-00027-2"
+  }
+]

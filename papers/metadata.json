@@ -1,553 +1,337 @@
 [
   {
-    "filename": "Oh_2020_ElasticTTI_GJI.pdf",
-    "title": "Elastic orthorhombic anisotropic full-waveform inversion using the scattering-integral approach based on the tensor-train decomposition",
+    "filename": "Shin_2026_CoupledFEM_JSE.pdf",
+    "title": "Coupled acoustic-elastic finite element modeling of underwater sound propagation",
     "authors": [
       {
-        "name": "J.-W. Oh",
-        "affiliation": "Chonbuk National University, Korea"
+        "name": "Youngjae Shin"
       },
       {
-        "name": "T. Alkhalifah",
-        "affiliation": "King Abdullah University of Science and Technology (KAUST), Saudi Arabia"
+        "name": "Won-Ki Kim"
+      },
+      {
+        "name": "Eunpyo Lim"
+      },
+      {
+        "name": "Youngseok Lee"
+      },
+      {
+        "name": "Jaehwan Oh"
+      },
+      {
+        "name": "Dawoon Lee"
+      },
+      {
+        "name": "Ho Seuk Bae"
       }
     ],
-    "journal": "Geophysical Journal International",
-    "year": 2020,
-    "doi": "10.1093/gji/ggaa323",
-    "abstract": "Full-waveform inversion (FWI) for elastic orthorhombic anisotropic media is computationally expensive and requires careful parameterization. We develop an efficient multiparameter FWI approach using the scattering-integral method with the tensor-train (TT) decomposition to reduce the computational cost of building sensitivity kernels. The TT decomposition compresses the Green's function tensor, enabling efficient computation of the partial derivative wavefields without explicitly solving additional wave equations for each parameter perturbation. We demonstrate the method on synthetic examples and analyze the trade-offs between orthorhombic parameters.",
-    "keywords": null,
-    "num_pages": 20,
-    "figures": [
-      "Figure 1: Radiation patterns of the partial derivative wavefields for orthorhombic parameters",
-      "Figure 2: Sensitivity kernels for different parameterizations",
-      "Figure 3: Comparison of scattering patterns between different methods",
-      "Figure 4: True and initial models for the orthorhombic FWI test",
-      "Figure 5: FWI results showing inverted parameters",
-      "Figure 6: Convergence curves and data fitting",
-      "Figure 7: Cross-talk analysis between parameters"
-    ]
+    "journal": "Journal of Seismic Exploration",
+    "year": 2026,
+    "volume": "35",
+    "issue": "3",
+    "pages": "026100045",
+    "doi": "10.36922/JSE026100045",
+    "published_online": "2026-05-20",
+    "status": "published",
+    "verified_on": "2026-09-11",
+    "source_sha256": "c17917789cd7be12b6d6a19728f926a4351bad581dbe0d5d2edcc1fc8eca0cba"
+  },
+  {
+    "filename": "Shin_2026_WaveSep_TT_AppliedSciences.pdf",
+    "title": "Tensor-Train-Based Elastic Wavefield Decomposition in VTI Media",
+    "authors": [
+      {
+        "name": "Youngjae Shin"
+      }
+    ],
+    "journal": "Applied Sciences",
+    "year": 2026,
+    "volume": "16",
+    "issue": "2",
+    "pages": "569",
+    "doi": "10.3390/app16020569",
+    "published_online": "2026-01-06",
+    "status": "published",
+    "verified_on": "2026-09-11",
+    "source_sha256": "17433332483787a37bf29485e9b254dc4530e0f8789daf591b3376249d69cdda"
+  },
+  {
+    "filename": "Shin_2025_CrossAttention_UNet.pdf",
+    "title": "Cross-Attention U-Net for Elastic Wavefield Decomposition in Anisotropic Media",
+    "authors": [
+      {
+        "name": "Youngjae Shin"
+      }
+    ],
+    "journal": "Applied Sciences",
+    "year": 2025,
+    "volume": "15",
+    "issue": "7",
+    "pages": "4019",
+    "doi": "10.3390/app15074019",
+    "published_online": "2025-04-05",
+    "status": "published",
+    "verified_on": "2026-09-11",
+    "source_sha256": "9b6aea7625b410ea0d1805277bae45a3fd1884d3fc57c5b3044f770b909efc09"
   },
   {
     "filename": "Park_2025_Graphite_GeosciJ.pdf",
     "title": "Overview of graphite supply chain and its challenges",
     "authors": [
       {
-        "name": "J. Park",
-        "affiliation": "Korea Institute of Geoscience and Mineral Resources (KIGAM), Daejeon, South Korea"
+        "name": "Junhyeok Park"
       },
       {
-        "name": "S.-J. Cho",
-        "affiliation": "Korea Institute of Geoscience and Mineral Resources (KIGAM), Daejeon, South Korea"
+        "name": "Seong-Jun Cho"
       },
       {
-        "name": "Y. Shin",
-        "affiliation": "Gyeongsang National University, Jinju, South Korea"
+        "name": "Seungwook Shin"
       },
       {
-        "name": "S. Shin",
-        "affiliation": "Korea Institute of Geoscience and Mineral Resources (KIGAM), Daejeon, South Korea"
+        "name": "Rina Kim"
+      },
+      {
+        "name": "Dongbok Shin"
+      },
+      {
+        "name": "Youngjae Shin"
       }
     ],
     "journal": "Geosciences Journal",
     "year": 2025,
-    "doi": "10.1007/s12303-025-0056-2",
-    "abstract": "Graphite is a critical mineral for the clean energy transition, particularly as the primary anode material in lithium-ion batteries. However, its supply chain faces significant risks due to the high concentration of production and processing in China, low market value, and geopolitical uncertainties. This review provides a comprehensive overview of the graphite supply chain, from mining to battery anode material production, covering both natural and synthetic graphite pathways. Key challenges including environmental impacts, supply chain concentration, and trade policy risks are discussed. Five strategic recommendations are proposed: expanded exploration, advanced mining technologies, cost-effective small-deposit mining, enhanced government support, and standardized HS codes for material tracking.",
-    "keywords": [
-      "Graphite",
-      "Supply chain",
-      "Critical minerals",
-      "Battery anode material",
-      "Lithium-ion battery"
-    ],
-    "num_pages": 13,
-    "figures": [
-      "Figure 1: Global graphite production trend (2014-2023)",
-      "Figure 2: Graphite crystal structure and types (flake, amorphous, vein)",
-      "Figure 3: Graphite demand forecast for battery applications",
-      "Figure 4: World graphite reserve distribution by country (USGS, 2024)",
-      "Figure 5: Distribution of amorphous and flake graphite deposits and former mining sites in South Korea",
-      "Figure 6: Supply chain of natural graphite and synthetic graphite",
-      "Figure 7: China's production share by stage in the graphite supply chain"
-    ]
-  },
-  {
-    "filename": "Shin_2019_MonoAVTI_JAG.pdf",
-    "title": "Mono-component acoustic VTI full-waveform inversion using the displacement wavefields",
-    "authors": [
-      {
-        "name": "Youngjae Shin",
-        "affiliation": "Seoul National University, South Korea"
-      },
-      {
-        "name": "J.-W. Oh",
-        "affiliation": "Chonbuk National University, South Korea"
-      },
-      {
-        "name": "D.-J. Min",
-        "affiliation": "Seoul National University, South Korea"
-      }
-    ],
-    "journal": "Journal of Applied Geophysics",
-    "year": 2019,
-    "doi": "10.1016/j.jappgeo.2019.103816",
-    "abstract": "In acoustic full-waveform inversion (FWI) for VTI media, the radiation patterns of the partial derivative wavefields for the mono-component virtual sources are inconsistent with those from the elastic scattering theory. To overcome this limitation, we propose using vector wavefields by converting the mono-component pressure wavefields into displacement components based on the equation of motion. The proposed method yields radiation patterns and sensitivity kernels similar to those of the coupled wave equation with lower computational costs. We demonstrate through numerical examples using a simple syncline model and the modified Marmousi-II model with borehole acquisition that the proposed method properly updates the anisotropic parameters by the correct gradient direction consistent with the elastic scattering theory.",
-    "keywords": [
-      "Acoustic VTI",
-      "Full-waveform inversion",
-      "Mono-component",
-      "Displacement wavefields",
-      "Radiation pattern",
-      "Anisotropy"
-    ],
-    "num_pages": 15,
-    "figures": [
-      "Figure 1: Theoretical PP radiation patterns for five virtual sources of P-wave velocity, epsilon, and delta",
-      "Figure 2: Seismograms and wavefields from acoustic VTI modeling",
-      "Figure 3: Staggered grid configuration for displacement conversion",
-      "Figure 4: PP scattering patterns comparing coupled equation and proposed displacement wavefields method",
-      "Figure 5: Sensitivity kernels using the coupled equation for P-wave velocity, epsilon, and delta perturbations",
-      "Figure 6: Sensitivity kernels using the decomposed equation for P-wave velocity, epsilon, and delta perturbations",
-      "Figure 7: Sensitivity kernels using the proposed method for P-wave velocity, epsilon, and delta perturbations",
-      "Figure 8: Simple syncline model: P-wave velocity, epsilon, and delta",
-      "Figure 9: Gradient directions of P-wave velocity for the syncline model",
-      "Figure 10: Gradient directions of epsilon for the syncline model",
-      "Figure 11: Gradient directions of delta for the syncline model",
-      "Figure 12: Modified Marmousi-II model: P-wave velocity, epsilon, delta, and acquisition geometry",
-      "Figure 13: Initial models for FWI of the modified Marmousi-II model",
-      "Figure 14: Differences between true and initial models",
-      "Figure 15: FWI results obtained by the mono-component virtual source",
-      "Figure 16: FWI results obtained by the proposed method",
-      "Figure 17: Depth profiles of P-wave velocity, epsilon, and delta at x=2 km and 3.46 km",
-      "Figure 18: First gradients of anisotropic parameters using mono-component, proposed, and coupled equation methods",
-      "Figure 19: Theoretical radiation patterns of delta for horizontal and inclined layers"
-    ]
-  },
-  {
-    "filename": "Shin_2020_PA_RTM_ExpGeophys.pdf",
-    "title": "Pseudo-acoustic reverse-time migration for 2D VTI media using the Volve OBC data",
-    "authors": [
-      {
-        "name": "Youngjae Shin",
-        "affiliation": "Seoul National University / KIGAM, South Korea"
-      },
-      {
-        "name": "J.-W. Oh",
-        "affiliation": "Chonbuk National University, South Korea"
-      },
-      {
-        "name": "D.-J. Min",
-        "affiliation": "Seoul National University, South Korea"
-      }
-    ],
-    "journal": "Exploration Geophysics",
-    "year": 2020,
-    "doi": "10.1080/08123985.2020.1835441",
-    "abstract": "We examine the feasibility of mono-component-based pseudo-acoustic reverse-time migration (PA-RTM) for 2D VTI media using real OBC data acquired in the Volve oil field of the North Sea. To investigate the influence of anisotropic parameters on the RTM image and the sensitivity of data components to seismic anisotropy, we first conducted RTM using synthetic data generated using anisotropic tomography models provided with the observed data. From these synthetic experiments, we confirmed that the anisotropic parameter delta is not a significant factor in PA-RTM for VTI media. Isotropic RTM using only pressure wavefield data located the reflectors poorly compared to anisotropic RTM. However, RTM with vertical acceleration was less affected by seismic anisotropy than that using pressure wavefield data due to the intrinsic properties of vertical acceleration data. Real data examples showed that PA-RTM for VTI media successfully located the target reflectors using either pressure wavefields or vertical acceleration data, and that vertical acceleration data were less influenced than pressure wavefield data by anisotropic properties.",
-    "keywords": [
-      "Reverse-time migration",
-      "VTI",
-      "Pseudo-acoustic",
-      "OBC data",
-      "Volve oil field",
-      "Anisotropy"
-    ],
-    "num_pages": 12,
-    "figures": [
-      "Figure 1: Volve oil field location and survey geometry",
-      "Figure 2: 2D anisotropic velocity model from tomography",
-      "Figure 3: Synthetic wavefield snapshots",
-      "Figure 4: RTM images of synthetic pressure wavefield data (isotropic vs. anisotropic with different parameters)",
-      "Figure 5: RTM images of synthetic vertical acceleration data (isotropic vs. anisotropic with different parameters)",
-      "Figure 6: RTM images of observed Volve OBC pressure wavefield data (isotropic vs. anisotropic)",
-      "Figure 7: RTM images of observed Volve OBC vertical acceleration data (isotropic vs. anisotropic)",
-      "Figure 8: Angle-domain common image gathers (ADCIGs) from pressure wavefield and vertical acceleration data at 4 km",
-      "Figure 9: ADCIGs from pressure wavefield and vertical acceleration data at 8 km"
-    ]
-  },
-  {
-    "filename": "Shin_2021_3D_ERT_Minerals.pdf",
-    "title": "Geophysical Properties of Precambrian Igneous Rocks in the Gwanin Vanadiferous Titanomagnetite Deposit, Korea",
-    "authors": [
-      {
-        "name": "Youngjae Shin",
-        "affiliation": "Korea Institute of Geoscience and Mineral Resources (KIGAM), Daejeon, South Korea"
-      },
-      {
-        "name": "Seungwook Shin",
-        "affiliation": "Korea Institute of Geoscience and Mineral Resources (KIGAM), Daejeon, South Korea"
-      },
-      {
-        "name": "Seong-Jun Cho",
-        "affiliation": "Korea Institute of Geoscience and Mineral Resources (KIGAM), Daejeon, South Korea"
-      },
-      {
-        "name": "Jung-Sub Shin",
-        "affiliation": "Korea Institute of Geoscience and Mineral Resources (KIGAM), Daejeon, South Korea"
-      }
-    ],
-    "journal": "Minerals",
-    "year": 2021,
-    "doi": "10.3390/min11060563",
-    "abstract": "We applied 3D electrical resistivity tomography (ERT) to explore the Yeoncheon titanium magnetite (TM) deposit in the Gonamsan igneous intrusion. This intrusion is classified as quartz monzodiorite (QMD) and monzogabbro-monzodiorite (GMD) according to the ratio of mafic rocks. Because iron-titanium mineralization is mainly developed in the GMD, separating the two monzodiorites provides helpful information for identifying ore deposits. The electrical resistivity survey was carried out along three parallel survey lines using dipole spacings of 20, 40, and 60 m. We performed 3D electrical resistivity inversion from 2D resistivity models to investigate the complex mountainous terrain. From the 3D inversion results, we were able to separate the region of the GMD based on the measured resistivity of the drilling data.",
-    "keywords": [
-      "3D ERT",
-      "Electrical resistivity tomography",
-      "Titanomagnetite",
-      "Vanadiferous",
-      "Igneous rocks",
-      "Mineral exploration"
-    ],
-    "num_pages": 11,
-    "figures": [
-      "Figure 1: Geologic map of the Gonamsan area with magnetic anomaly and survey line locations",
-      "Figure 2: Geologic map of the survey area",
-      "Figure 3: Electrode configuration and survey line layout",
-      "Figure 4: 2D inversion results of electrical resistivity for survey lines 1, 2, and 3",
-      "Figure 5: 3D inversion results of electrical resistivity with frontal direction",
-      "Figure 6: Pseudo-sections showing observed and predicted data for 2D and 3D inversion",
-      "Figure 7: Lithology of drilling cores and borehole locations",
-      "Figure 8: Box plots of measured resistivity by rock type (GMD, QMD, DK, ME)",
-      "Figure 9: 3D inversion results filtered below 7000 ohm-m to separate GMD",
-      "Figure 10: 2D sections of 3D resistivity inversion results along survey lines"
-    ]
-  },
-  {
-    "filename": "Shin_2021_Parameterization_ActaGeophys.pdf",
-    "title": "An efficient multiparameter acoustic anisotropic full-waveform inversion depending on parameterization",
-    "authors": [
-      {
-        "name": "Youngjae Shin",
-        "affiliation": "Seoul National University, South Korea"
-      },
-      {
-        "name": "J.-W. Oh",
-        "affiliation": "Chonbuk National University, South Korea"
-      },
-      {
-        "name": "D.-J. Min",
-        "affiliation": "Seoul National University, South Korea"
-      }
-    ],
-    "journal": "Acta Geophysica",
-    "year": 2021,
-    "doi": "10.1007/s11600-021-00637-4",
-    "abstract": "We investigate the influence of parameterization on acoustic VTI full-waveform inversion using the decomposed equation with displacement wavefields. By comparing different parameterizations including (vp, epsilon, delta), (vph, eta, epsilon), and others, we analyze the trade-offs between model parameters through radiation pattern analysis and numerical FWI experiments. The decomposed equation with displacement wavefields provides efficient gradient computation while maintaining correct radiation patterns consistent with elastic scattering theory. We demonstrate that the choice of parameterization significantly affects the inversion results, especially for anisotropic parameters, and that certain parameterizations reduce trade-offs between parameters.",
-    "keywords": [
-      "Full-waveform inversion",
-      "Parameterization",
-      "Acoustic VTI",
-      "Anisotropy",
-      "Radiation patterns"
-    ],
-    "num_pages": 11,
-    "figures": [
-      "Figure 1: Radiation patterns for different parameterizations",
-      "Figure 2: True velocity models for the modified Marmousi-II test",
-      "Figure 3: Initial models for FWI",
-      "Figure 4: FWI results for parameterization (vp, epsilon, delta)",
-      "Figure 5: FWI results for parameterization (vp, eta, epsilon)",
-      "Figure 6: Depth profiles comparing inverted and true models",
-      "Figure 7: Convergence curves for different parameterizations"
-    ]
-  },
-  {
-    "filename": "Shin_2022_RockClassification_Minerals.pdf",
-    "title": "Rock classification in a vanadiferous titanomagnetite deposit based on supervised machine learning",
-    "authors": [
-      {
-        "name": "Youngjae Shin",
-        "affiliation": "Korea Institute of Geoscience and Mineral Resources (KIGAM), Daejeon, South Korea"
-      },
-      {
-        "name": "Seungwook Shin",
-        "affiliation": "Korea Institute of Geoscience and Mineral Resources (KIGAM), Daejeon, South Korea"
-      }
-    ],
-    "journal": "Minerals",
-    "year": 2022,
-    "doi": "10.3390/min12040461",
-    "abstract": "We applied supervised machine learning methods to classify rocks in the Gonamsan vanadiferous titanomagnetite deposit in Pocheon, South Korea. Using geophysical data including electrical resistivity, chargeability, and magnetic susceptibility from both rock samples and field measurements, we trained and compared five ML algorithms: Support Vector Machine (SVM), Random Forest (RF), XGBoost, LightGBM, and Deep Neural Network (DNN). The models classify rocks into three categories: ore-bearing monzogabbro-monzodiorite (GMD), host quartz monzodiorite (QMD), and metamorphic rock (ME). Among the tested algorithms, Random Forest showed the best overall performance with 95.7% accuracy. Feature importance analysis revealed that electrical resistivity is the most significant feature for distinguishing GMD from other rock types.",
-    "keywords": [
-      "Machine learning",
-      "Rock classification",
-      "Titanomagnetite",
-      "Support vector machine",
-      "Random forest",
-      "XGBoost",
-      "LightGBM",
-      "Deep neural network",
-      "Geophysical data"
-    ],
-    "num_pages": 13,
-    "figures": [
-      "Figure 1: Study area and geological map of the Gonamsan intrusion",
-      "Figure 2: Distribution of geophysical measurements (resistivity, chargeability, magnetic susceptibility)",
-      "Figure 3: Histograms and box plots of geophysical properties by rock type",
-      "Figure 4: Correlation matrix of features",
-      "Figure 5: Machine learning workflow diagram",
-      "Figure 6: Confusion matrices for the five ML models",
-      "Figure 7: Feature importance from Random Forest and XGBoost",
-      "Figure 8: ROC curves for the five ML models",
-      "Figure 9: Classification maps showing predicted rock types in the study area"
-    ]
-  },
-  {
-    "filename": "Shin_2023_CCS_DAF.pdf",
-    "title": "Two-Step Seismic Monitoring Strategy with Diffraction-Angle Filtering for Carbon Capture and Storage",
-    "authors": [
-      {
-        "name": "Youngjae Shin",
-        "affiliation": "Gyeongsang National University, Jinju, South Korea"
-      },
-      {
-        "name": "J.-W. Oh",
-        "affiliation": "Chonbuk National University, South Korea"
-      },
-      {
-        "name": "Hyunggu Jun",
-        "affiliation": "Inha University, South Korea"
-      },
-      {
-        "name": "Sang-Eun Park",
-        "affiliation": "Korea Institute of Geoscience and Mineral Resources (KIGAM), South Korea"
-      }
-    ],
-    "journal": "Journal of Marine Science and Engineering",
-    "year": 2023,
-    "doi": "10.3390/jmse11010057",
-    "abstract": "We proposed a two-step seismic monitoring approach for carbon capture and storage (CCS) projects using diffraction-angle filtering (DAF). In the first step, a velocity model is constructed using FWI with mode IV of DAF. Mode IV of DAF helps to prevent the local minima problem because the gradient of FWI is mainly composed of low-wavenumber components. In the second step, the seismic image is obtained by RTM with mode V of DAF using the updated velocity model through FWI, and the boundaries between layers are well represented due to the high-wavenumber components. The behavior of CO2 can be monitored from the difference in seismic images between surveys performed before and after injection. We implemented synthetic testing using the velocity model in the Volve oil field.",
-    "keywords": [
-      "Carbon capture and storage",
-      "CCS",
-      "Diffraction-angle filtering",
-      "Full-waveform inversion",
-      "Reverse-time migration",
-      "4D seismic monitoring"
-    ],
-    "num_pages": 13,
-    "figures": [
-      "Figure 1: Volve oil field velocity model and CO2 injection setup",
-      "Figure 2: Diffraction-angle filtering (DAF) modes illustration",
-      "Figure 3: FWI results with different DAF modes",
-      "Figure 4: Velocity model comparison (true, initial, and inverted)",
-      "Figure 5: RTM images using different DAF modes",
-      "Figure 6: Baseline and post-injection RTM images",
-      "Figure 7: Difference sections showing CO2 plume detection",
-      "Figure 8: Monitoring results by subtracting baseline and post-injection RTM images (conventional vs. mode V DAF)",
-      "Figure 9: Monitoring results using FWI with mode IV of DAF (conventional vs. mode V DAF)"
-    ]
+    "volume": "29",
+    "issue": "",
+    "pages": "329–341",
+    "doi": "10.1007/s12303-025-00027-2",
+    "published_online": "2025-03-26",
+    "status": "published",
+    "verified_on": "2026-09-11",
+    "source_sha256": "3b45757536711b628cc392180318001d003d58b9b933d2f3a612226312cd02d0"
   },
   {
     "filename": "Shin_2024_BERT_Seismic_GGE.pdf",
     "title": "BERT 기반 사전학습을 이용한 탄성파 자료처리: 송신원 모음 배열 비교",
     "authors": [
       {
-        "name": "Youngjae Shin",
-        "affiliation": "Gyeongsang National University, Jinju, South Korea"
+        "name": "신영재"
       }
     ],
-    "journal": "Geophysics and Geophysical Exploration (지구물리와 물리탐사)",
+    "journal": "지구물리와 물리탐사",
     "year": 2024,
-    "doi": "10.7582/GGE.2024.27.3.169",
-    "abstract": "This study applies BERT-based pretraining to enhance the efficiency of seismic data processing and compares the performance of receiver array and time array arrangements. Experiments were conducted on synthetic seismic data including simple flat-layer velocity models with and without faults. The pretraining stage used masked input data to learn data reconstruction, followed by fine-tuning for denoising, velocity prediction, and fault detection tasks. Both receiver array and time array configurations showed similar denoising performance, but the time array outperformed in velocity prediction and fault detection tasks. The time array achieved perfect accuracy, recall, and F1 score of 1.00 in fault detection, while the receiver array recorded 0.82 accuracy. The BERT-based pretraining model with time arrays can more effectively capture spatial distributions and event patterns, making it suitable for seismic data processing tasks.",
-    "keywords": [
-      "BERT",
-      "Pretraining",
-      "Seismic data processing",
-      "Receiver array",
-      "Time array",
-      "Transfer learning",
-      "Denoising",
-      "Velocity prediction",
-      "Fault detection"
-    ],
-    "num_pages": 12,
-    "figures": [
-      "Figure 1: Schematic of BERT pretraining and fine-tuning workflow for seismic data",
-      "Figure 2: Synthetic velocity models with and without faults",
-      "Figure 3: Denoising results comparing receiver array and time array",
-      "Figure 4: MSE comparison across noise levels for denoising task",
-      "Figure 5: Predicted velocity profiles for test data comparing receiver and time arrays",
-      "Figure 6: Confusion matrices for fault presence detection using receiver array and time array",
-      "Figure 7: Loss curves for denoising and velocity prediction tasks with and without pretraining",
-      "Figure 8: Attention maps during pretraining and random noise reduction (16 attention maps across 4 layers and 4 heads)"
-    ]
+    "volume": "27",
+    "issue": "3",
+    "pages": "171–180",
+    "doi": "10.7582/GGE.2024.27.3.171",
+    "published_online": null,
+    "status": "published",
+    "verified_on": "2026-09-11",
+    "source_sha256": "a53f30ac65150f442268b1cdde4221373f285ae06bcb84a819297c2142f82d3a"
   },
   {
     "filename": "Shin_2024_DomainAdaptation_Geosciences.pdf",
-    "title": "Domain Adaptation for Mineral Exploration Using Geophysical and Drilling Data",
+    "title": "Domain Adaptation from Drilling to Geophysical Data for Mineral Exploration",
     "authors": [
       {
-        "name": "Youngjae Shin",
-        "affiliation": "Gyeongsang National University, Jinju, South Korea"
+        "name": "Youngjae Shin"
       }
     ],
     "journal": "Geosciences",
     "year": 2024,
+    "volume": "14",
+    "issue": "7",
+    "pages": "183",
     "doi": "10.3390/geosciences14070183",
-    "abstract": "This study demonstrated the application of domain adaptation to bridge the gap between diverse geoscience datasets, enhancing mineral exploration. Models trained on detailed, labeled drilling data were adapted to interpret broader, unlabeled geophysical data, effectively maintaining predictive capabilities across different domains. The Domain-Adversarial Neural Network (DANN) model was chosen for its ability to effectively adapt features across domains without needing labeled data from the target domain. The model was evaluated using the silhouette score, which confirmed its effectiveness in clustering data. It performed well on test data from the source domain, successfully learning and adapting to the data characteristics. Although the borehole data from the target domain included only HOST labels, it was used to indirectly validate the model's predictive accuracy. The absence of overlap with areas classified as ORE by the trained model suggests it identified relevant geological features.",
-    "keywords": [
-      "Domain adaptation",
-      "DANN",
-      "Mineral exploration",
-      "Geophysical data",
-      "Drilling data",
-      "Machine learning",
-      "Transfer learning"
-    ],
-    "num_pages": 13,
-    "figures": [
-      "Figure 1: Geological map and survey area of the Gonamsan region",
-      "Figure 2: Geophysical survey data (resistivity, chargeability, magnetic susceptibility)",
-      "Figure 3: DANN architecture diagram (encoder, task model, discriminator)",
-      "Figure 4: Workflow of domain adaptation process",
-      "Figure 5: Classification outcomes from RF model and DANN model in the geophysical survey region",
-      "Figure 6: t-SNE visualizations before and after applying DANN model",
-      "Figure 7: Classification results marking ORE areas from RF and DANN models with borehole data",
-      "Figure 8: Comparison between geological map and DANN classification results"
-    ]
+    "published_online": "2024-07-09",
+    "status": "published",
+    "verified_on": "2026-09-11",
+    "source_sha256": "646b44dcc30d1ec76d639d31b99de54277654b3ac714f7836895ade4d05b467e"
   },
   {
-    "filename": "Shin_2025_CrossAttention_UNet.pdf",
-    "title": "Cross-Attention-Enhanced U-Net for Elastic Wavefield Vector Decomposition in Anisotropic Media",
+    "filename": "Shin_2023_CCS_DAF.pdf",
+    "title": "4D Seismic Monitoring with Diffraction-Angle-Filtering for Carbon Capture and Storage (CCS)",
     "authors": [
       {
-        "name": "Youngjae Shin",
-        "affiliation": "Gyeongsang National University, Jinju, South Korea"
+        "name": "Youngjae Shin"
+      },
+      {
+        "name": "Hyeong-Geun Ji"
+      },
+      {
+        "name": "Sea-Eun Park"
+      },
+      {
+        "name": "Ju-Won Oh"
       }
     ],
-    "journal": "Applied Sciences",
-    "year": 2025,
-    "doi": "10.3390/app15074019",
-    "abstract": "This study presents a cross-attention enhanced U-Net architecture for elastic wavefield vector decomposition in anisotropic media. The method combines deep learning with a dual-branch encoder structure to process displacement components separately while maintaining their relationships through cross-attention mechanisms. The results show that the cross-attention mechanisms improve the decomposition quality, achieving better accuracy and fewer artifacts compared to conventional U-Net architectures. The mean PSNR increased from 42.8360 dB to 44.1008 dB and SSIM from 0.8897 to 0.9043 with cross-attention. The model's performance on larger domains and different geological settings, demonstrated through experiments with the BP and Hess VTI models, indicates its potential for practical seismic applications.",
-    "keywords": [
-      "Cross-attention",
-      "U-Net",
-      "Wavefield decomposition",
-      "Anisotropic media",
-      "Deep learning",
-      "VTI",
-      "qP-qSV separation"
-    ],
-    "num_pages": 14,
-    "figures": [
-      "Figure 1: Architecture of the proposed cross-attention-based U-Net model for seismic wavefield decomposition",
-      "Figure 2: Elastic properties of the modified BP 2007 anisotropic benchmark model (Vp, Vs, epsilon, delta)",
-      "Figure 3: Example of patch extraction process from the modified BP 2007 model",
-      "Figure 4: Example input snapshot (ux and uz) and ground truth qP and qS components",
-      "Figure 5: Wavefield separation results from the U-Net for the snapshot in Figure 4",
-      "Figure 6: Wavefield separation results from the cross-attention U-Net for the same snapshot",
-      "Figure 7: Wavefield separation results on the larger BP model domain (1936x562) using sliding-patch approach",
-      "Figure 8: Wavefield separation results on the noisy Hess VTI model using the sliding-patch approach"
-    ]
+    "journal": "Journal of Marine Science and Engineering",
+    "year": 2023,
+    "volume": "11",
+    "issue": "1",
+    "pages": "57",
+    "doi": "10.3390/jmse11010057",
+    "published_online": "2022-12-31",
+    "status": "published",
+    "verified_on": "2026-09-11",
+    "source_sha256": "1709d48465cca3d8659af90e73cdece0b3bf046d74468d136049f36171150937"
   },
   {
-    "filename": "Shin_2026_WaveSep_TT_GJI.pdf",
-    "title": "Elastic Wavefield Decomposition in VTI Media Using Tensor-Train Decomposition",
+    "filename": "Shin_2022_RockClassification_Minerals.pdf",
+    "title": "Rock Classification in a Vanadiferous Titanomagnetite Deposit Based on Supervised Machine Learning",
     "authors": [
       {
-        "name": "Youngjae Shin",
-        "affiliation": "Gyeongsang National University, Jinju, South Korea"
+        "name": "Youngjae Shin"
+      },
+      {
+        "name": "Seungwook Shin"
       }
     ],
-    "journal": "Applied Sciences",
-    "year": 2026,
-    "doi": "10.3390/app16020569",
-    "abstract": "This paper presents a tensor-train decomposition framework for elastic wavefield decomposition in VTI media. The proposed method formulates the Christoffel-based projection operator as a four-dimensional tensor and constructs its compressed TT representation using the TT-cross algorithm. The method includes a residual-orthogonal decomposition (ROD) strategy that extracts the qSV component from the residual wavefield after removing the qP component, reducing cross-talk between separated modes. The proposed TT method consistently improved separation fidelity across three 2D VTI tests (two-layer, BP 2007 subset, and Overthrust-based model). Reconstruction errors for TT remained below 1% (0.094-0.89%), whereas CUR showed larger errors (1.67-6.44%), yielding a 4-46x improvement, with markedly reduced cross-talk. The TT method also demonstrated favorable computational scaling for larger grids with GPU acceleration.",
-    "keywords": [
-      "Tensor-train decomposition",
-      "Wavefield separation",
-      "VTI media",
-      "qP-qSV decomposition",
-      "TT-cross",
-      "Residual-orthogonal decomposition",
-      "Elastic wave"
-    ],
-    "num_pages": 22,
-    "figures": [
-      "Figure 1: Two-layer VTI model configuration (Vp, Vs, epsilon, delta)",
-      "Figure 2: BP VTI model configuration (Vp, Vs, epsilon, delta)",
-      "Figure 3: Overthrust VTI model configuration (Vp, Vs, epsilon, delta)",
-      "Figure 4: Time-domain trace comparison at selected receivers for two-layer, BP, and Overthrust models",
-      "Figure 5: Wavefield decomposition results for the two-layer VTI model using TT method",
-      "Figure 6: Wavefield decomposition results for the two-layer VTI model using CUR method",
-      "Figure 7: Wavefield decomposition results for the BP VTI model using TT method",
-      "Figure 8: Wavefield decomposition results for the BP VTI model using CUR method",
-      "Figure 9: Wavefield decomposition results for the Overthrust model using TT method",
-      "Figure 10: Wavefield decomposition results for the Overthrust model using CUR method"
-    ]
+    "journal": "Minerals",
+    "year": 2022,
+    "volume": "12",
+    "issue": "4",
+    "pages": "461",
+    "doi": "10.3390/min12040461",
+    "published_online": "2022-04-10",
+    "status": "published",
+    "verified_on": "2026-09-11",
+    "source_sha256": "c8753010dd0ca3baf72ab7ed6a3e1ecf0e959e3143ba24164263de821fb3d5ac"
   },
   {
-    "filename": "main_seismamba/main_seismamba.pdf",
-    "title": "SeisMamba: A Dual-Axis State-Space Model for DAS Denoising and Phase Picking",
+    "filename": "Shin_2021_Parameterization_ActaGeophys.pdf",
+    "title": "An efficient multiparameter acoustic anisotropic full-waveform inversion depending on parameterization",
     "authors": [
       {
-        "name": "Youngjae Shin",
-        "affiliation": "Gyeongsang National University, Jinju, South Korea"
+        "name": "Youngjae Shin"
+      },
+      {
+        "name": "Ju-Won Oh"
+      },
+      {
+        "name": "Dong-Joo Min"
       }
     ],
-    "journal": "Manuscript (not yet published)",
-    "year": 2025,
-    "doi": null,
-    "abstract": "SeisMamba is a hierarchical encoder-decoder (U-Net style) network for DAS (Distributed Acoustic Sensing) data processing in which all sequence-modeling computations are performed by DualMamba blocks. The DualMamba block employs parallel channel-axis and time-axis BiMamba branches with learnable axis fusion, exploiting the anisotropic structure of DAS gathers. The network handles both denoising and phase picking tasks. Compared against ResUNet (CNN baseline) and SwinDAS (Swin Transformer), SeisMamba achieves the highest phase-picking accuracy (91.52%) on the DeepSubDAS real dataset, while ResUNet leads in denoising SNR (29.19 dB vs. 26.98 dB). SeisMamba outperforms ResUNet on colored noise by 0.61 dB (31.09 vs 30.48 dB) due to its global temporal context from bidirectional SSM scans. SeisMamba has 4.16M parameters with O(n) computational complexity, demonstrating favorable scalability for long DAS records.",
-    "keywords": [
-      "State-space model",
-      "Mamba",
-      "DAS",
-      "Distributed acoustic sensing",
-      "Denoising",
-      "Phase picking",
-      "Deep learning",
-      "Seismic data processing"
-    ],
-    "num_pages": 30,
-    "figures": [
-      "Figure 1: SeisMamba architecture - (a) U-Net encoder-decoder with denoising and picking heads, (b) DualMamba block, (c) BiMamba unit",
-      "Figure 2: Denoising visual comparison - noisy input, clean reference, and denoised outputs for four noise types",
-      "Figure 3: Phase picking visual comparison on DeepSubDAS data",
-      "Figure 4: Scalability benchmark - inference time vs. sequence length for all four models",
-      "Figure 5: Scalability benchmark - inference time vs. channel count",
-      "Figure 6: GPU memory usage vs. sequence length and channel count"
-    ]
+    "journal": "Acta Geophysica",
+    "year": 2021,
+    "volume": "69",
+    "issue": "",
+    "pages": "1257–1267",
+    "doi": "10.1007/s11600-021-00609-2",
+    "published_online": "2021-07-06",
+    "status": "published",
+    "verified_on": "2026-09-11",
+    "source_sha256": "31a2ca37c069dafb99a0ebcecd7e47839e47f8cb948d2add534aece252f72ab5"
   },
   {
-    "filename": "main_seismamba/main_apophis.pdf",
-    "title": "Seismic Wave Propagation and Normal-Mode Analysis of Asteroid (99942) Apophis for the RAMSES Mission",
+    "filename": "Shin_2021_3D_ERT_Minerals.pdf",
+    "title": "Application of 3D Electrical Resistivity Tomography in the Yeoncheon Titanomagnetite Deposit, South Korea",
     "authors": [
       {
-        "name": "Youngjae Shin",
-        "affiliation": "Gyeongsang National University, Jinju, South Korea"
+        "name": "Youngjae Shin"
+      },
+      {
+        "name": "Seungwook Shin"
+      },
+      {
+        "name": "Seong-Jun Cho"
+      },
+      {
+        "name": "Jeong-Sul Son"
       }
     ],
-    "journal": "Manuscript (not yet published, target: The Planetary Science Journal)",
-    "year": 2025,
-    "doi": null,
-    "abstract": "This study presents the first three-dimensional continuum elastic wave propagation model for tidal seismic excitation of asteroid (99942) Apophis during its 2029 Earth flyby, computed with the spectral-element code SPECFEM3D on a voxel mesh of the asteroid's bi-lobed shape. A systematic parameter study spanning P-wave velocity Vp = 50-300 m/s, bulk density rho = 1500-3150 kg/m3, and quality factor Qmu = 20-100 reveals the following results: Tidal peak ground velocity ranges from 0.001 to 0.14 nm/s at the baseline model (Vp = 200 m/s), falling 7-1000 times below the SIA noise floor of 1 nm/s. The bi-lobed shape supports seven independently verified normal-mode eigenfrequencies at 0.35-1.07 Hz for the baseline model, confirmed as source-independent body resonances. Ground velocity scales as PGV proportional to Vp^-2 and inversely with density, while Qmu contributes less than 3.5% variation. A critical P-wave velocity for tidal detectability with the existing instrument is approximately 75 m/s, corresponding to the extreme low end of laboratory measurements for asteroid analogs.",
-    "keywords": [
-      "Asteroid seismology",
-      "Apophis",
-      "RAMSES mission",
-      "SPECFEM3D",
-      "Spectral-element method",
-      "Tidal seismicity",
-      "Normal modes",
-      "Peak ground velocity",
-      "SIA instrument"
+    "journal": "Minerals",
+    "year": 2021,
+    "volume": "11",
+    "issue": "6",
+    "pages": "563",
+    "doi": "10.3390/min11060563",
+    "published_online": "2021-05-25",
+    "status": "published",
+    "verified_on": "2026-09-11",
+    "source_sha256": "e99e19dfcf92e67a009388316f1e28a0de48a02efce274db368f2529a5ff7405"
+  },
+  {
+    "filename": "Shin_2021_PA_RTM_ExpGeophys.pdf",
+    "title": "Pseudo-acoustic anisotropic reverse-time migration of an ocean-bottom cable dataset acquired in the North Sea",
+    "authors": [
+      {
+        "name": "Youngjae Shin"
+      },
+      {
+        "name": "Ju-Won Oh"
+      },
+      {
+        "name": "Dong-Joo Min"
+      },
+      {
+        "name": "Jongha Hwang"
+      }
     ],
-    "num_pages": 18,
-    "figures": [
-      "Figure 1: Synthetic bi-lobed shape model (369x335x174 m), voxel mesh cross-section, and 50 surface receiver layout",
-      "Figure 2: Amplitude validation (Vp=200 m/s): PGV vs. distance and SPECFEM3D/far-field amplitude ratio distribution",
-      "Figure 3: Surface PGV distribution for the four Vp cases (1 kN force source)",
-      "Figure 4: Three-component velocity seismograms from the tidal-source simulation at near-source and far stations",
-      "Figure 5: Stacked velocity spectra (60 s simulations) for all four Vp cases showing eigenfrequency peaks",
-      "Figure 6: Source-deconvolved transfer functions at Vp=200 m/s for different source frequencies confirming source independence",
-      "Figure 7: Eigenfrequencies vs. Vs for all four Vp cases with analytical spheroidal/toroidal predictions",
-      "Figure 8: Detectability summary: SIA-filtered PGV and SNR vs. Vp for force and tidal sources",
-      "Figure 9: Required noise floor for SNR=3 tidal detection vs. Vp with SIA and InSight SEIS levels",
-      "Figure 10: Source-count sensitivity (N=10, 50, 100 tidal CMT sources)",
-      "Figure 11: Mesh convergence test (Vp=50 m/s): eigenfrequency spectra and station PGV comparison for 12 m and 6 m meshes"
-    ]
+    "journal": "Exploration Geophysics",
+    "year": 2021,
+    "volume": "52",
+    "issue": "5",
+    "pages": "551–562",
+    "doi": "10.1080/08123985.2020.1852877",
+    "published_online": null,
+    "status": "published",
+    "verified_on": "2026-09-11",
+    "source_sha256": "b557d6e14a1a79254f8b68d80f80031cb159201b19b96f1c1c3529c46de54ec2",
+    "bibliography_source": "https://snu.elsevierpure.com/en/publications/pseudo-acoustic-anisotropic-reverse-time-migration-of-an-ocean-bo/"
+  },
+  {
+    "filename": "Oh_2020_ElasticTTI_GJI.pdf",
+    "title": "Multistage elastic full-waveform inversion for tilted transverse isotropic media",
+    "authors": [
+      {
+        "name": "Ju-Won Oh"
+      },
+      {
+        "name": "Youngjae Shin"
+      },
+      {
+        "name": "Tariq Alkhalifah"
+      },
+      {
+        "name": "Dong-Joo Min"
+      }
+    ],
+    "journal": "Geophysical Journal International",
+    "year": 2020,
+    "volume": "223",
+    "issue": "",
+    "pages": "57–76",
+    "doi": "10.1093/gji/ggaa295",
+    "published_online": "2020-06-20",
+    "status": "published",
+    "verified_on": "2026-09-11",
+    "source_sha256": "7466c9c4bd3aa29c07cb9304f1fd01fbdb868e4e237c26106241a1939a48f853"
+  },
+  {
+    "filename": "Shin_2019_MonoAVTI_JAG.pdf",
+    "title": "Mono-component multiparameter acoustic full waveform inversion in vertically transverse isotropic media using converted vector wavefields",
+    "authors": [
+      {
+        "name": "Youngjae Shin"
+      },
+      {
+        "name": "Ju-Won Oh"
+      },
+      {
+        "name": "Shinwoong Kim"
+      },
+      {
+        "name": "Dong-Joo Min"
+      }
+    ],
+    "journal": "Journal of Applied Geophysics",
+    "year": 2019,
+    "volume": "170",
+    "issue": "",
+    "pages": "103816",
+    "doi": "10.1016/j.jappgeo.2019.07.010",
+    "published_online": "2019-07-12",
+    "status": "published",
+    "verified_on": "2026-09-11",
+    "source_sha256": "79d9be085e76a88c4bb817e83d8d5f8daa5c5da1044df7a424cceb8d79c2aa0a"
   }
 ]

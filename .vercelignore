@@ -1,0 +1,7 @@
+raw/
+papers/*.pdf
+workshop/
+output/
+.git/
+.omc/
+SESSION_NOTES.md

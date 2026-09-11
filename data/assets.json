@@ -1,0 +1,42 @@
+[
+  {
+    "path": "images/coupled-fem-domain.png",
+    "source": "papers/Shin_2026_CoupledFEM_JSE.pdf",
+    "page": 7,
+    "figure": 1,
+    "extraction": "pdfimages -f 7 -l 7 -png (first image, no cropping)",
+    "credit": "Shin et al. (2026), Journal of Seismic Exploration, Figure 1",
+    "doi": "10.36922/JSE026100045",
+    "sha256": "0bedddf5823be41e97ef6b8638149edb99d9ee9fa56c64a5349e634e118b0f98",
+    "source_sha256": "c17917789cd7be12b6d6a19728f926a4351bad581dbe0d5d2edcc1fc8eca0cba"
+  },
+  {
+    "path": "images/logo-192.png",
+    "source": "raw/design/logo.png",
+    "extraction": "sips -Z 192",
+    "credit": "Existing lab emblem",
+    "sha256": "8de8d65988159567987c10dafcc4a14297b41bd21e9a800e04502b2871c3713f",
+    "source_sha256": "fe9f0dca142167bcbebdec0ef8c6b1a3a1f72e180f4c72159dceb8b090dcc0d9"
+  },
+  {
+    "path": "images/gnu-geophysics-banner-v1.jpg",
+    "source": "raw/generated/gnu-geophysics-banner-v1.png",
+    "extraction": "JPEG quality 85; original composition and dimensions retained",
+    "credit": "GNU campus photograph; AI reinterpretation with geology and geophysical survey equipment",
+    "reference_url": "https://commons.wikimedia.org/wiki/File:%EA%B0%80%EC%A2%8C_%EC%BA%A0%ED%8D%BC%EC%8A%A4_%ED%95%AD%EA%B3%B5%EC%B4%AC%EC%98%81.jpg",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "generation_record": "raw/generated/gnu-geophysics-banner-v1.json",
+    "sha256": "5ee36dab46bc80628b8484f512bf9d88f84a84c00cd04338532cb5368323ba9f",
+    "source_sha256": "a3f104bccba579d7f15c80b1c38b685b78c7519c58df25869aa89fbe530778d4"
+  },
+  {
+    "path": "images/shin-youngjae.jpg",
+    "source": "raw/profile/신영재_증명사진.jpg",
+    "optional_local_source": true,
+    "extraction": "Original photograph copied unchanged; no crop or retouching",
+    "credit": "User-provided profile photograph from GNU archive",
+    "sha256": "9738a5c457cc0686d2e690021bb82c34b0055f00dccb13e17fec07592941c708",
+    "source_sha256": "9738a5c457cc0686d2e690021bb82c34b0055f00dccb13e17fec07592941c708"
+  }
+]

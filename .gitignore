@@ -1,3 +1,12 @@
 .DS_Store
 .omc/
 SESSION_NOTES.md
+node_modules/
+dist/
+output/
+__pycache__/
+# Preserve research/CV source bundles locally; only reviewed website data is versioned.
+raw/
+papers/*.pdf
+workshop/
+.vercel/
